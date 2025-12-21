@@ -1,0 +1,37 @@
+[
+  {
+    "questionId": "R2_Q1",
+    "order": 1,
+    "question": "Who created Bitcoin?",
+    "correctAnswer": "satoshi nakamoto",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q2",
+    "order": 2,
+    "question": "What is a smart contract?",
+    "correctAnswer": "self executing contract",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q3",
+    "order": 3,
+    "question": "Which blockchain uses Proof of Stake?",
+    "correctAnswer": "ethereum",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q4",
+    "order": 4,
+    "question": "What is a hash?",
+    "correctAnswer": "fixed length output",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q5",
+    "order": 5,
+    "question": "What does NFT stand for?",
+    "correctAnswer": "non fungible token",
+    "tokenReward": 1
+  }
+]

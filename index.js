@@ -12,8 +12,7 @@ import connectDB from "./src/db/db.connect.js";
 // import { sanitizeRequest } from "./src/middlewares/sanitizeRequests.js";
 import { errorHandler } from "./src/middlewares/errorHandler.js";
 
-// Routes
-import teamRoutes from "./src/routes/team.route.js";
+import routes from "./src/routes/index.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -44,12 +43,9 @@ app.use(
   })
 );
 
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 app.get("/", (req, res) => res.send("Blockverse Backend is running....."));
 
-app.use("/api/team", teamRoutes);
+app.use("/api", routes);
 
 app.use(errorHandler);
 

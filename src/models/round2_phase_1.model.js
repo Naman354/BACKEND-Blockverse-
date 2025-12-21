@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Round2QuestionSchema = new mongoose.Schema(
   {
-    Round2questionId: {
+    questionId: {
       type: String,
       required: true,
       unique: true,
@@ -31,6 +31,7 @@ const Round2QuestionSchema = new mongoose.Schema(
       type: String,
       required: true,
       select: false,
+      lowercase: true,
     },
 
     tokenReward: {
@@ -41,8 +42,5 @@ const Round2QuestionSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Round2Question = mongoose.model(
-  "Round_2_Questions",
-  Round2QuestionSchema
-);
+const Round2Question = mongoose.model("Round2Questions", Round2QuestionSchema);
 export default Round2Question;

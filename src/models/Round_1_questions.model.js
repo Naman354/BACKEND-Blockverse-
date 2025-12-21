@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const round1QuestionSchema = new mongoose.Schema(
   {
-    Round1questionId: {
+    questionId: {
       type: String,
       required: true,
       unique: true,
@@ -27,6 +27,7 @@ const round1QuestionSchema = new mongoose.Schema(
       type: String,
       required: true,
       select: false,
+      lowercase: true,
     },
 
     pointReward: {
@@ -37,5 +38,5 @@ const round1QuestionSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Round1Question = mongoose.model("Round_1_Question", round1QuestionSchema);
+const Round1Question = mongoose.model("Round1Question", round1QuestionSchema);
 export default Round1Question;

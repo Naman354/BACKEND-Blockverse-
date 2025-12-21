@@ -1,6 +1,7 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import Team from "../models/team.model.js";
 
 export const protect = async (req, res, next) => {
   const authHeader = req.headers["authorization"];
@@ -13,19 +14,24 @@ export const protect = async (req, res, next) => {
 
   const token = authHeader.split(" ")[1];
 
+  // console.log("Token....", token);
+
   try {
     const decoded = jwt.verify(token, process.env.JWT_ACCESS_SECRET);
+    // console.log("decoded......", decoded);
 
-    let user = null;
-    if (!user) {
-      return res
-        .status(401)
-        .json({ success: false, message: "User not found." });
+    const team = await Team.findById(decoded.sub).select("_id teamId");
+
+    if (!team) {
+      return res.status(401).json({
+        success: false,
+        message: "Team not found",
+      });
     }
 
     req.user = {
-      _id: user._id,
-      username: user.username || user.name,
+      _id: team._id,
+      teamId: team.teamId,
     };
 
     next();

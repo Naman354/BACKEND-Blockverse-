@@ -1,0 +1,44 @@
+[
+  {
+    "questionId": "R1_Q1",
+    "order": 1,
+    "question": "What does HTTP stand for?",
+    "correctAnswer": "hypertext transfer protocol",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R1_Q2",
+    "order": 2,
+    "question": "Which data structure uses FIFO?",
+    "correctAnswer": "queue",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R1_Q3",
+    "order": 3,
+    "question": "What is the time complexity of binary search?",
+    "correctAnswer": "o(log n)",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R1_Q4",
+    "order": 4,
+    "question": "Which language runs in a browser?",
+    "correctAnswer": "javascript",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R1_Q5",
+    "order": 5,
+    "question": "What does SQL stand for?",
+    "correctAnswer": "structured query language",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R1_Q50",
+    "order": 5,
+    "question": "What does SQL stand for?",
+    "correctAnswer": "structured query language",
+    "pointReward": 10
+  }
+]
