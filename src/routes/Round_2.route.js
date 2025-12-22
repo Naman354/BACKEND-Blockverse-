@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get("/phase1/questions", protect, getRound2Phase1Questions);
 router.post("/phase1/submit", protect, submitRound2Phase1Answer);
-router.get("/store", protect, getStoreClues);
-router.post("/store/buy", protect, buyClue);
+router.get("/phase2/store", protect, getStoreClues);
+router.post("/phase2/store/buy", protect, buyClue);
 
 export default router;

@@ -6,6 +6,7 @@ import asyncHandler from "../utils/asyncHandler.js";
 import ApiResponse from "../utils/ApiResponse.js";
 import ApiError from "../utils/ApiError.js";
 import { emitLeaderboard } from "../utils/emitLeaderboard.js";
+import Round2Clues from "../models/round2_phase2_store_clue.model.js";
 
 export const getRound2Phase1Questions = asyncHandler(async (req, res) => {
   const teamId = req.user._id;
@@ -74,6 +75,7 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
 
   await progress.save();
 
+  // this line increase 5 because Round 2 does not affect Leader board anymore so all participants get 5 point to affect the leaderboard.
   await Team.findByIdAndUpdate(teamId, {
     $inc: { totalPoints: 5 },
   });
@@ -95,20 +97,19 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
 export const getStoreClues = asyncHandler(async (req, res) => {
   const teamId = req.user._id;
 
+  const team = await Team.findById(teamId).select("year");
   const progress = await Round2Progress.findOne({ teamId });
 
-  if (!progress || !progress.storeUnlocked) {
-    throw new ApiError(403, "Store is locked. Complete Phase 1 first.");
-  }
+  // if (!progress || !progress.storeUnlocked) {
+  //   throw new ApiError(403, "Store is locked. Complete Phase 1 first.");
+  // }
 
-  const allClues = await StoreClue.find().select(
-    "clueId title description tokenCost"
-  );
-
-  const ownedClues = await TeamClue.find({ teamId }).distinct("clueId");
+  const allClues = await Round2Clues.find({
+    year: team.year,
+  });
 
   const availableClues = allClues.filter(
-    (clue) => !ownedClues.includes(clue.clueId)
+    (clue) => !progress.purchasedClues.includes(clue.clueId)
   );
 
   return res.json(
@@ -133,19 +134,14 @@ export const buyClue = asyncHandler(async (req, res) => {
 
   const progress = await Round2Progress.findOne({ teamId });
 
-  if (!progress || !progress.storeUnlocked) {
-    throw new ApiError(403, "Store is locked");
-  }
+  // if (!progress || !progress.storeUnlocked) {
+  //   throw new ApiError(403, "Store is locked");
+  // }
 
-  const clue = await StoreClue.findOne({ clueId });
+  const clue = await Round2Clues.findOne({ clueId });
 
   if (!clue) {
     throw new ApiError(404, "Clue not found");
-  }
-
-  const alreadyOwned = await TeamClue.findOne({ teamId, clueId });
-  if (alreadyOwned) {
-    throw new ApiError(409, "Clue already purchased");
   }
 
   if (progress.tokens < clue.tokenCost) {
@@ -153,12 +149,9 @@ export const buyClue = asyncHandler(async (req, res) => {
   }
 
   progress.tokens -= clue.tokenCost;
-  await progress.save();
+  progress.purchasedClues.push(clue.clueId);
 
-  await TeamClue.create({
-    teamId,
-    clueId,
-  });
+  await progress.save();
 
   return res.json(
     new ApiResponse(

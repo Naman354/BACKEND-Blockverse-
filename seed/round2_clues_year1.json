@@ -1,0 +1,37 @@
+[
+  {
+    "clueId": "R2_Y1_C1",
+    "year": 1,
+    "title": "Starting Point",
+    "description": "focus on the basic definition related to the topic.",
+    "tokenCost": 3
+  },
+  {
+    "clueId": "R2_Y1_C2",
+    "year": 1,
+    "title": "Concept Link",
+    "description": "the solution connects multiple ideas learned earlier.",
+    "tokenCost": 3
+  },
+  {
+    "clueId": "R2_Y1_C3",
+    "year": 1,
+    "title": "Logic Hint",
+    "description": "apply step by step reasoning instead of guessing.",
+    "tokenCost": 4
+  },
+  {
+    "clueId": "R2_Y1_C4",
+    "year": 1,
+    "title": "Keyword Focus",
+    "description": "one keyword from round 1 questions is important.",
+    "tokenCost": 4
+  },
+  {
+    "clueId": "R2_Y1_C5",
+    "year": 1,
+    "title": "Final Hint",
+    "description": "combine all clues to form a single clear answer.",
+    "tokenCost": 5
+  }
+]

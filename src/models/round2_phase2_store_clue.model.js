@@ -24,4 +24,5 @@ const round2ClueSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Round2Clue", round2ClueSchema);
+const Round2Clues = mongoose.model("Round2Clue", round2ClueSchema);
+export default Round2Clues;

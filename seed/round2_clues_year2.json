@@ -1,0 +1,37 @@
+[
+  {
+    "clueId": "R2_Y2_C1",
+    "year": 2,
+    "title": "Formula Hint",
+    "description": "use mathematical relationships instead of raw values.",
+    "tokenCost": 1
+  },
+  {
+    "clueId": "R2_Y2_C2",
+    "year": 2,
+    "title": "Pattern Insight",
+    "description": "look for repetition or symmetry in the data.",
+    "tokenCost": 2
+  },
+  {
+    "clueId": "R2_Y2_C3",
+    "year": 2,
+    "title": "Sequence Order",
+    "description": "the order of steps is more important than the steps themselves.",
+    "tokenCost": 4
+  },
+  {
+    "clueId": "R2_Y2_C4",
+    "year": 2,
+    "title": "Advanced Logic",
+    "description": "eliminate impossible cases before calculating.",
+    "tokenCost": 5
+  },
+  {
+    "clueId": "R2_Y2_C5",
+    "year": 2,
+    "title": "Final Connection",
+    "description": "all clues together point to one unique solution.",
+    "tokenCost": 6
+  }
+]

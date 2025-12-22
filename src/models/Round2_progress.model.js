@@ -18,6 +18,8 @@ const round2ProgressSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    purchasedClues: [String],
+
     phase1Completed: {
       type: Boolean,
       default: false,
