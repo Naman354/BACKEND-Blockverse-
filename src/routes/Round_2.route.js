@@ -4,7 +4,7 @@ import {
   submitRound2Phase1Answer,
   getStoreClues,
   buyClue,
-} from "../controllers/Round2.controller.js";
+} from "../controllers/Round_2.controller.js";
 
 import { protect } from "../middlewares/auth.middleware.js";
 
