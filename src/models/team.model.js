@@ -8,24 +8,40 @@ const teamSchema = new mongoose.Schema(
       unique: true,
       uppercase: true,
       trim: true,
+      index: true,
     },
+
     password: {
       type: String,
       required: true,
     },
+
     year: {
       type: Number,
       enum: [1, 2],
       required: true,
     },
+
     members: [
       {
-        name: String,
-        rollNo: String,
-        branch: String,
-        email: String,
+        name: { type: String, required: true },
+        rollNo: { type: String, required: true },
+        branch: { type: String, required: true },
+        email: { type: String, required: true },
       },
     ],
+
+    totalPoints: {
+      type: Number,
+      default: 0,
+      index: true,
+    },
+
+    rounds: {
+      round1Completed: { type: Boolean, default: false },
+      round2Completed: { type: Boolean, default: false },
+      round3Completed: { type: Boolean, default: false },
+    },
   },
   { timestamps: true }
 );

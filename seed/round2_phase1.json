@@ -1,0 +1,322 @@
+[
+  {
+    "questionId": "R2_Y1_Q1",
+    "year": 1,
+    "order": 1,
+    "question": "A mixture of 60L contains 40% sugar and another mixture of 40L contains 25% sugar. What percentage of sugar is in the combined 100L mixture?",
+    "correctAnswer": "35",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q2",
+    "year": 1,
+    "order": 2,
+    "question": "Compound interest on Rs.5000 at 8% per annum for 2 years (compounded annually) is?",
+    "correctAnswer": "832",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q3",
+    "year": 1,
+    "order": 3,
+    "question": "A can complete a work in 10 days while B takes 15 days. Working together, how many days will they take to complete the work?",
+    "correctAnswer": "6",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q4",
+    "year": 1,
+    "order": 4,
+    "question": "Cost price of an item is Rs.800 and it is sold for Rs.1000. What is the profit percentage?",
+    "correctAnswer": "25",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q5",
+    "year": 1,
+    "order": 5,
+    "question": "A train travels 240 km at 60 km/h and returns the same distance at 80 km/h. What is the average speed for the entire journey?",
+    "correctAnswer": "68.57",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q6",
+    "year": 1,
+    "order": 6,
+    "question": "A pipe can fill a tank in 15 hours while another pipe can empty the same tank in 20 hours. If both pipes are opened simultaneously to an empty tank, how long will it take to fill the tank completely?",
+    "correctAnswer": "60",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q7",
+    "year": 1,
+    "order": 7,
+    "question": "The present age of a father is 5 times that of his son. After 8 years, the father's age will be 4 times that of his son. What is the son's present age?",
+    "correctAnswer": "8",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q8",
+    "year": 1,
+    "order": 8,
+    "question": "A is B's sister. C is B's mother. D is C's father. How is D related to A?",
+    "correctAnswer": "grandfather",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q9",
+    "year": 1,
+    "order": 9,
+    "question": "What is the area of a circle with radius 7 cm?",
+    "correctAnswer": "154",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q10",
+    "year": 1,
+    "order": 10,
+    "question": "What is the average price per kilogram when 4 kg of apples cost Rs.120/kg and 6 kg of apples cost Rs.80/kg?",
+    "correctAnswer": "96",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q11",
+    "year": 1,
+    "order": 11,
+    "question": "A and B work in the ratio 5:3. Together they complete a work in 24 days. How many days will B take to complete the same work alone?",
+    "correctAnswer": "40",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q12",
+    "year": 1,
+    "order": 12,
+    "question": "What comes next in the series: 3, 7, 13, 21, 31, __?",
+    "correctAnswer": "43",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q13",
+    "year": 1,
+    "order": 13,
+    "question": "In a coding pattern where CAT becomes DBU and PEN becomes QFO, what does BOOK become?",
+    "correctAnswer": "cppl",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q14",
+    "year": 1,
+    "order": 14,
+    "question": "In a coding pattern where TEAM becomes MAET and PLAY becomes YALP, what does CODE become?",
+    "correctAnswer": "edoc",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q15",
+    "year": 1,
+    "order": 15,
+    "question": "In a coding pattern where ABCD becomes CBAD and EFGH becomes GEFH, what does IJKL become?",
+    "correctAnswer": "kjil",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q16",
+    "year": 1,
+    "order": 16,
+    "question": "In a coding pattern where CAT becomes CET and PEN becomes PON, what does BIG become?",
+    "correctAnswer": "bog",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q17",
+    "year": 1,
+    "order": 17,
+    "question": "A person walks 40m North, then 40m East, then 40m South, then 40m West. What is his final distance from the starting point?",
+    "correctAnswer": "0",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q18",
+    "year": 1,
+    "order": 18,
+    "question": "At 3:00 on a clock, what is the angle between the hour hand and the minute hand?",
+    "correctAnswer": "90",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q19",
+    "year": 1,
+    "order": 19,
+    "question": "What number comes in the blank: 3, 6, 12, 24, __, 96?",
+    "correctAnswer": "48",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Y1_Q20",
+    "year": 1,
+    "order": 20,
+    "question": "Pointing to a man, X said: His only sister's only brother is my wife's brother. How is that man related to X?",
+    "correctAnswer": "brother",
+    "tokenReward": 1
+  },
+    {
+      "questionId": "R2_Y2_Q1",
+      "year": 2,
+      "order": 1,
+      "question": "A sum becomes 2.5 times itself in 10 years at compound interest. What is the annual rate of interest (approx.)?",
+      "correctAnswer": "9.6",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q2",
+      "year": 2,
+      "order": 2,
+      "question": "The ratio of speeds of two trains is 3:4. If the faster train covers 400 km in 5 hours, how long will the slower train take to cover 300 km?",
+      "correctAnswer": "5",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q3",
+      "year": 2,
+      "order": 3,
+      "question": "If the product of two numbers is 180 and their HCF is 6, what is their LCM?",
+      "correctAnswer": "30",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q4",
+      "year": 2,
+      "order": 4,
+      "question": "A pipe fills a tank in 12 hours and another empties it in 18 hours. How long will it take to fill the tank if both work together?",
+      "correctAnswer": "36",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q5",
+      "year": 2,
+      "order": 5,
+      "question": "The difference between simple interest and compound interest on ₹10,000 for 2 years at 10% p.a. is:",
+      "correctAnswer": "100",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q6",
+      "year": 2,
+      "order": 6,
+      "question": "If x/y = 3/4 and x² + y² = 400, find xy.",
+      "correctAnswer": "240",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q7",
+      "year": 2,
+      "order": 7,
+      "question": "Find the next number in the series: 4, 9, 16, 25, ?",
+      "correctAnswer": "36",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q8",
+      "year": 2,
+      "order": 8,
+      "question": "If CAT is coded as DBU, how is DOG coded?",
+      "correctAnswer": "eph",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q9",
+      "year": 2,
+      "order": 9,
+      "question": "A man walks 15 m north, 20 m east and 15 m south. How far is he from the starting point?",
+      "correctAnswer": "20",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q10",
+      "year": 2,
+      "order": 10,
+      "question": "If today is Thursday, what day will it be after 100 days?",
+      "correctAnswer": "saturday",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q11",
+      "year": 2,
+      "order": 11,
+      "question": "Find the odd one out: 8, 27, 64, 100, 125",
+      "correctAnswer": "100",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q12",
+      "year": 2,
+      "order": 12,
+      "question": "What is the minimum number of bits required to represent decimal number 255 in binary?",
+      "correctAnswer": "8",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q13",
+      "year": 2,
+      "order": 13,
+      "question": "The man I am pointing to is the son of the woman who is the mother of my father. How is the man related to me?",
+      "correctAnswer": "uncle",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q14",
+      "year": 2,
+      "order": 14,
+      "question": "The person in the photograph is the daughter of the wife of my father’s son. How is the person related to me?",
+      "correctAnswer": "daughter",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q15",
+      "year": 2,
+      "order": 15,
+      "question": "B is the sister of my mother’s only brother’s daughter. How is B related to me?",
+      "correctAnswer": "cousin",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q16",
+      "year": 2,
+      "order": 16,
+      "question": "That boy is the son of the woman who is the daughter-in-law of my mother. How is the boy related to me?",
+      "correctAnswer": "grandson",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q17",
+      "year": 2,
+      "order": 17,
+      "question": "If A=1, B=2, ..., Z=26, what is the value of the word LOGIC?",
+      "correctAnswer": "46",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q18",
+      "year": 2,
+      "order": 18,
+      "question": "If 3×4=19 and 5×6=41, what is 4×5?",
+      "correctAnswer": "29",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q19",
+      "year": 2,
+      "order": 19,
+      "question": "If ENGINE is written as GNENIE, how is SYSTEM written?",
+      "correctAnswer": "tsysme",
+      "tokenReward": 1
+    },
+    {
+      "questionId": "R2_Y2_Q20",
+      "year": 2,
+      "order": 20,
+      "question": "If + means −, − means ×, × means ÷ and ÷ means +, find: 8 + 4 − 2 × 6 ÷ 3",
+      "correctAnswer": "6",
+      "tokenReward": 1
+    }
+]
