@@ -60,7 +60,10 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
     return res.json(new ApiResponse(200, null, "Already solved"));
   }
 
-  if (question.correctAnswer !== answer.toLowerCase()) {
+  const correct = String(question.correctAnswer).trim().toLowerCase();
+  const submitted = String(answer).trim().toLowerCase();
+
+  if (correct !== submitted) {
     throw new ApiError(400, "Incorrect answer");
   }
 
