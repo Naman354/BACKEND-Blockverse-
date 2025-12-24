@@ -82,3 +82,28 @@ export const submitRound1Answer = asyncHandler(async (req, res) => {
 
   res.json(new ApiResponse(200, { points: question.pointReward }, "Correct"));
 });
+
+export const getRound1Progress = asyncHandler(async (req, res) => {
+  const teamId = req.user._id;
+
+  const progress = await Round1Progress.findOne({ teamId });
+
+  if (!progress) {
+    return res.json(
+      new ApiResponse(200, { solved: [], score: 0 }, "No progress yet")
+    );
+  }
+
+  const team = await Team.findById(teamId).select("totalPoints");
+
+  return res.json(
+    new ApiResponse(
+      200,
+      {
+        solved: progress.solvedQuestions,
+        score: team.totalPoints || 0,
+      },
+      "Round 1 progress"
+    )
+  );
+});
