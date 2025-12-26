@@ -26,6 +26,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // app.use(detectBot);
 // app.use("/api", apiLimiter);
 // app.use(sanitizeRequest);
@@ -48,7 +49,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", routes);
-
 app.use(errorHandler);
 
 export default app;

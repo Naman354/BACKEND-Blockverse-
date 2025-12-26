@@ -33,6 +33,8 @@ export const protect = async (req, res, next) => {
       _id: team._id,
       teamId: team.teamId,
     };
+      
+    req.teamId = team._id; 
 
     next();
   } catch (error) {
