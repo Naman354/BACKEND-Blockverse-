@@ -43,7 +43,7 @@ const round3QuestionSchema = new mongoose.Schema(
 );
 
 round3QuestionSchema.index(
-    { bombNumber: 1, questionNumber: 1},
+    { year: 1, bombNumber: 1, questionNumber: 1},
     { unique: true}
 );
 

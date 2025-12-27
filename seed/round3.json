@@ -1,109 +1,246 @@
 [
   {
+    "year": 1,
     "bombNumber": 1,
     "questionNumber": 1,
-    "questionText": "Bomb 1 – Question 1",
-    "correctAnswer": "answer1",
+    "questionText": "What must exist first for any system to function?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 1,
     "questionNumber": 2,
-    "questionText": "Bomb 1 – Question 2",
-    "correctAnswer": "answer2",
+    "questionText": "Should later blocks be fixed before the first one?",
+    "correctAnswer": "D",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 1,
     "questionNumber": 3,
-    "questionText": "Bomb 1 – Question 3",
-    "correctAnswer": "answer3",
+    "questionText": "What links the first block to the rest of the system?",
+    "correctAnswer": "B",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 1,
     "questionNumber": 4,
-    "questionText": "Bomb 1 – Question 4",
-    "correctAnswer": "answer4",
+    "questionText": "Does a single authority create the first block?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 1,
     "questionNumber": 5,
-    "questionText": "Bomb 1 – Question 5",
-    "correctAnswer": "answer5",
+    "questionText": "Why must all concepts be considered together at initialization?",
+    "correctAnswer": "C",
     "points": 5
   },
 
   {
+    "year": 1,
     "bombNumber": 2,
     "questionNumber": 1,
-    "questionText": "Bomb 2 – Question 1",
-    "correctAnswer": "answer6",
+    "questionText": "Can trust exist without revealing identity?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 2,
     "questionNumber": 2,
-    "questionText": "Bomb 2 – Question 2",
-    "correctAnswer": "answer7",
+    "questionText": "What matters more: identity or correctness?",
+    "correctAnswer": "B",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 2,
     "questionNumber": 3,
-    "questionText": "Bomb 2 – Question 3",
-    "correctAnswer": "answer8",
+    "questionText": "If nodes disagree, how is truth established?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 2,
     "questionNumber": 4,
-    "questionText": "Bomb 2 – Question 4",
-    "correctAnswer": "answer9",
+    "questionText": "Why is decentralization safer than central control?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 2,
     "questionNumber": 5,
-    "questionText": "Bomb 2 – Question 5",
-    "correctAnswer": "answer10",
+    "questionText": "Why does the system still fail even when trust rules are followed?",
+    "correctAnswer": "C",
     "points": 5
   },
 
   {
+    "year": 1,
     "bombNumber": 3,
     "questionNumber": 1,
-    "questionText": "Bomb 3 – Question 1",
-    "correctAnswer": "answer11",
+    "questionText": "Is fixing individual issues enough to stabilize the entire system?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 3,
     "questionNumber": 2,
-    "questionText": "Bomb 3 – Question 2",
-    "correctAnswer": "answer12",
+    "questionText": "What mistake are Off-Chainers repeatedly making?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 3,
     "questionNumber": 3,
-    "questionText": "Bomb 3 – Question 3",
-    "correctAnswer": "answer13",
+    "questionText": "Who benefits most from continuous restoration cycles?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 3,
     "questionNumber": 4,
-    "questionText": "Bomb 3 – Question 4",
-    "correctAnswer": "answer14",
+    "questionText": "Why does every successful fix increase instability instead of reducing it?",
+    "correctAnswer": "B",
     "points": 5
   },
   {
+    "year": 1,
     "bombNumber": 3,
     "questionNumber": 5,
-    "questionText": "Bomb 3 – Question 5",
-    "correctAnswer": "answer15",
+    "questionText": "What happens when all ideas are combined?",
+    "correctAnswer": "C",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 1,
+    "questionNumber": 1,
+    "questionText": "Two fragments differ in size but follow the same internal behavior. What remains valid?",
+    "correctAnswer": "C",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 1,
+    "questionNumber": 2,
+    "questionText": "What should be identified first when a glitch repeats across cycles?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 1,
+    "questionNumber": 3,
+    "questionText": "Why does fixing values without checking repetition and proportion fail?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 1,
+    "questionNumber": 4,
+    "questionText": "Why does instability appear to jump suddenly instead of increasing smoothly?",
+    "correctAnswer": "C",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 1,
+    "questionNumber": 5,
+    "questionText": "Why must all these observations be applied together to proceed?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+
+  {
+    "year": 2,
+    "bombNumber": 2,
+    "questionNumber": 1,
+    "questionText": "Why do correct fixes fail when applied in the wrong order?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 2,
+    "questionNumber": 2,
+    "questionText": "Why does instability escalate faster with each cycle?",
+    "correctAnswer": "C",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 2,
+    "questionNumber": 3,
+    "questionText": "Why does repeating a fix without understanding the pattern fail?",
+    "correctAnswer": "A",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 2,
+    "questionNumber": 4,
+    "questionText": "Why is sequence more dangerous under exponential growth?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 2,
+    "questionNumber": 5,
+    "questionText": "What condition must be met before this anomaly can be cleared?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+
+  {
+    "year": 2,
+    "bombNumber": 3,
+    "questionNumber": 1,
+    "questionText": "Why does the system reject correct fixes applied too early or too late?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 3,
+    "questionNumber": 2,
+    "questionText": "What causes instability to escalate beyond predictable limits?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 3,
+    "questionNumber": 3,
+    "questionText": "What does the system prioritize once multiple logical streams align?",
+    "correctAnswer": "C",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 3,
+    "questionNumber": 4,
+    "questionText": "Why are some correct solutions rejected during final stabilization?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 2,
+    "bombNumber": 3,
+    "questionNumber": 5,
+    "questionText": "When all system principles align, what is the final outcome?",
+    "correctAnswer": "C",
     "points": 5
   }
 ]
