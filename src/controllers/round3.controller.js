@@ -65,9 +65,15 @@ export const initRound3 = asyncHandler(async (requestAnimationFrame, res) => {
         );
     }
 
-    const questions = await Round3Question.find().select(
+    const team = await Team.findById(teamId).select("year");
+    if (!team) {
+        throw new ApiError(404, "Team not found");
+    }
+
+    const questions = await Round3Question.find({ year: team.year }).select(
         "_id bombNumber questionNumber questionText points"
     );
+
 
     return res.json(
         new ApiResponse(200, {

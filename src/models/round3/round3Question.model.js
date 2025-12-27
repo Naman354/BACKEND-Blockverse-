@@ -8,6 +8,12 @@ const round3QuestionSchema = new mongoose.Schema(
             enum: [1, 2, 3],
         },
 
+            year: {
+            type: Number,
+            enum: [1, 2],
+            required: true,
+        },
+
         questionNumber: {
             type: Number,
             required: true,
