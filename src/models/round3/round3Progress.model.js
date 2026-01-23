@@ -3,11 +3,24 @@ import mongoose from "mongoose";
 const questionProgressSchema = new mongoose.Schema(
     {
         questionId: {
-            type: mongoose.Schema.Types.ObjjectId,
-            ref: "round3Question",
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Round3Question",
+            required: true,
+        },
+        questionNumber: {
+            type: Number,
             required: true,
         },
 
+        questionText: {
+            type: String,
+            required: true,
+        },
+
+        points: {
+            type: Number,
+            required: true,
+        },
         solved: {
             type: Boolean,
             default: false,
@@ -25,7 +38,6 @@ const bombProgressSchema = new mongoose.Schema(
         bombNumber: {
             type: Number,
             required: true,
-            enum: [1, 2, 3],
         },
 
         mistakes: {
@@ -56,7 +68,7 @@ const round3ProgressSchema = new mongoose.Schema(
              enum: [
                 "NOT_STARTED",
                 "IN_PROGRESS",
-                "COMPELTED",
+                "COMPLETED",
                 "DISQUALIFIED",
                 "TIME_UP",
              ],
@@ -65,6 +77,7 @@ const round3ProgressSchema = new mongoose.Schema(
 
         startedAt: {
             type: Date,
+            required: true,
         },
 
         endedAt: {
