@@ -1,6 +1,8 @@
 const ROUND3_DURATION_MS = 30 * 60 * 1000; // 30 minutes
 const MAX_MISTAKES_PER_BOMB = 2; // reserved for submit logic
 
+// simple check for deploy
+
 import Round3Question from "../models/round3/round3Question.model.js";
 import Round3Progress from "../models/round3/round3Progress.model.js";
 import Team from "../models/team.model.js";
