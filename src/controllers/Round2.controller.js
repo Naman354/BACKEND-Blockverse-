@@ -8,6 +8,7 @@ import ApiError from "../utils/ApiError.js";
 import { emitLeaderboard } from "../utils/emitLeaderboard.js";
 import Round2Clues from "../models/round2_phase2_store_clue.model.js";
 import Round2_progressModel from "../models/Round2_progress.model.js";
+import { calculateTeamScore } from "../utils/calculateScore.js";
 
 export const getRound2Phase1Questions = asyncHandler(async (req, res) => {
   const teamId = req.user._id;
@@ -80,9 +81,9 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
   await progress.save();
 
   // this line increase 5 because Round 2 does not affect Leader board anymore so all participants get 5 point to affect the leaderboard.
-  await Team.findByIdAndUpdate(teamId, {
-    $inc: { totalPoints: 5 },
-  });
+  // await Team.findByIdAndUpdate(teamId, {
+  //   $inc: { totalPoints: 5 },
+  // });
 
   await emitLeaderboard(req);
 
@@ -187,7 +188,7 @@ export const getRound2Progress = asyncHandler(async (req, res) => {
     );
   }
 
-  const team = await Team.findById(teamId).select("totalPoints");
+  const score = await calculateTeamScore(teamId);
 
   return res.json(
     new ApiResponse(
@@ -196,7 +197,7 @@ export const getRound2Progress = asyncHandler(async (req, res) => {
         solved: progress.solvedQuestions,
         tokens: progress.tokens,
         purchasedClues: progress.purchasedClues,
-        score: team.totalPoints || 0,
+        score,
       },
       "Round 2 Progress",
     ),
