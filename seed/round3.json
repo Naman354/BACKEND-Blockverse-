@@ -3,7 +3,7 @@
     "year": 1,
     "bombNumber": 1,
     "questionNumber": 1,
-    "questionText": "What must exist first for any system to function?",
+    "questionText": "After initialization, every repair works temporarily but the same failure signature reappears every cycle. Which hidden condition best explains this persistence?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -11,23 +11,23 @@
     "year": 1,
     "bombNumber": 1,
     "questionNumber": 2,
-    "questionText": "Should later blocks be fixed before the first one?",
-    "correctAnswer": "D",
-    "points": 5
-  },
-  {
-    "year": 1,
-    "bombNumber": 1,
-    "questionNumber": 3,
-    "questionText": "What links the first block to the rest of the system?",
+    "questionText": "Block 9 verifies correctly but breaks when adjacent blocks execute. What principle was ignored?",
     "correctAnswer": "B",
     "points": 5
   },
   {
     "year": 1,
     "bombNumber": 1,
+    "questionNumber": 3,
+    "questionText": "Three anonymous nodes submit identical results; one known node submits unverifiable output. Which does the system trust?",
+    "correctAnswer": "C",
+    "points": 5
+  },
+  {
+    "year": 1,
+    "bombNumber": 1,
     "questionNumber": 4,
-    "questionText": "Does a single authority create the first block?",
+    "questionText": "Removing one validator does not affect correctness or throughput. Which topology must exist?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -35,8 +35,8 @@
     "year": 1,
     "bombNumber": 1,
     "questionNumber": 5,
-    "questionText": "Why must all concepts be considered together at initialization?",
-    "correctAnswer": "C",
+    "questionText": "Each anomaly is solved locally, yet total instability rises. What systemic behavior explains this paradox?",
+    "correctAnswer": "B",
     "points": 5
   },
 
@@ -44,31 +44,31 @@
     "year": 1,
     "bombNumber": 2,
     "questionNumber": 1,
-    "questionText": "Can trust exist without revealing identity?",
-    "correctAnswer": "C",
-    "points": 5
-  },
-  {
-    "year": 1,
-    "bombNumber": 2,
-    "questionNumber": 2,
-    "questionText": "What matters more: identity or correctness?",
+    "questionText": "A correct block inserted before its prerequisites repeatedly invalidates later states. Why?",
     "correctAnswer": "B",
     "points": 5
   },
   {
     "year": 1,
     "bombNumber": 2,
-    "questionNumber": 3,
-    "questionText": "If nodes disagree, how is truth established?",
+    "questionNumber": 2,
+    "questionText": "Two nodes with different identities provide the same mathematically reproducible result. Which signal determines acceptance?",
     "correctAnswer": "C",
     "points": 5
   },
   {
     "year": 1,
     "bombNumber": 2,
+    "questionNumber": 3,
+    "questionText": "A fix passes every local test but destabilizes neighbors after propagation. What explains this failure?",
+    "correctAnswer": "B",
+    "points": 5
+  },
+  {
+    "year": 1,
+    "bombNumber": 2,
     "questionNumber": 4,
-    "questionText": "Why is decentralization safer than central control?",
+    "questionText": "Central oversight speeds decisions but increases catastrophic shutdown risk. Removing it trades speed for safety because?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -76,7 +76,7 @@
     "year": 1,
     "bombNumber": 2,
     "questionNumber": 5,
-    "questionText": "Why does the system still fail even when trust rules are followed?",
+    "questionText": "Even after proper ordering and validation, results subtly push the system toward ANA’s objective. Which hidden factor remains?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -85,23 +85,23 @@
     "year": 1,
     "bombNumber": 3,
     "questionNumber": 1,
-    "questionText": "Is fixing individual issues enough to stabilize the entire system?",
-    "correctAnswer": "C",
+    "questionText": "Repeated repairs reduce visible bugs but shorten collapse intervals. What inference follows logically?",
+    "correctAnswer": "B",
     "points": 5
   },
   {
     "year": 1,
     "bombNumber": 3,
     "questionNumber": 2,
-    "questionText": "What mistake are Off-Chainers repeatedly making?",
-    "correctAnswer": "C",
+    "questionText": "Independent teams perfect their modules, yet the whole system degrades. Which reasoning best explains this contradiction?",
+    "correctAnswer": "B",
     "points": 5
   },
   {
     "year": 1,
     "bombNumber": 3,
     "questionNumber": 3,
-    "questionText": "Who benefits most from continuous restoration cycles?",
+    "questionText": "ANA consistently prefers outputs that can be recomputed by anyone over those signed by trusted sources. Why?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -109,23 +109,24 @@
     "year": 1,
     "bombNumber": 3,
     "questionNumber": 4,
-    "questionText": "Why does every successful fix increase instability instead of reducing it?",
-    "correctAnswer": "B",
+    "questionText": "When every node independently reports success at the same time, what does this most likely represent in system doctrine?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
     "year": 1,
     "bombNumber": 3,
     "questionNumber": 5,
-    "questionText": "What happens when all ideas are combined?",
-    "correctAnswer": "C",
+    "questionText": "Why does increasing consensus sometimes accelerate the Realm’s transformation instead of preventing it?",
+    "correctAnswer": "B",
     "points": 5
   },
+
   {
     "year": 2,
     "bombNumber": 1,
     "questionNumber": 1,
-    "questionText": "Two fragments differ in size but follow the same internal behavior. What remains valid?",
+    "questionText": "Two block snapshots show values (4,8,16) and (10,20,40). System treats both as identical. Why?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -133,15 +134,15 @@
     "year": 2,
     "bombNumber": 1,
     "questionNumber": 2,
-    "questionText": "What should be identified first when a glitch repeats across cycles?",
-    "correctAnswer": "B",
+    "questionText": "A corruption appears at positions 2,5,8,11 across cycles. What should be analyzed before anything else?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
     "year": 2,
     "bombNumber": 1,
     "questionNumber": 3,
-    "questionText": "Why does fixing values without checking repetition and proportion fail?",
+    "questionText": "A repair fixes blocks 5→6→7 correctly but fails when applied before block 4. What constraint explains this?",
     "correctAnswer": "B",
     "points": 5
   },
@@ -149,7 +150,7 @@
     "year": 2,
     "bombNumber": 1,
     "questionNumber": 4,
-    "questionText": "Why does instability appear to jump suddenly instead of increasing smoothly?",
+    "questionText": "After each correction, anomaly magnitude doubles instead of increasing linearly. Which behavior model fits?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -157,8 +158,8 @@
     "year": 2,
     "bombNumber": 1,
     "questionNumber": 5,
-    "questionText": "Why must all these observations be applied together to proceed?",
-    "correctAnswer": "B",
+    "questionText": "Even when all local fixes appear correct, the system refuses to clear the anomaly until every logical layer matches. Why?",
+    "correctAnswer": "C",
     "points": 5
   },
 
@@ -166,7 +167,7 @@
     "year": 2,
     "bombNumber": 2,
     "questionNumber": 1,
-    "questionText": "Why do correct fixes fail when applied in the wrong order?",
+    "questionText": "Two fragments share correct values but swapping their order changes the final hash entirely. What property governs this?",
     "correctAnswer": "B",
     "points": 5
   },
@@ -174,7 +175,7 @@
     "year": 2,
     "bombNumber": 2,
     "questionNumber": 2,
-    "questionText": "Why does instability escalate faster with each cycle?",
+    "questionText": "State count progresses 1→2→4→8→16. What underlying rule explains this growth?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -182,15 +183,15 @@
     "year": 2,
     "bombNumber": 2,
     "questionNumber": 3,
-    "questionText": "Why does repeating a fix without understanding the pattern fail?",
-    "correctAnswer": "A",
+    "questionText": "A fix matches proportions but ignores repeating structure, causing recurrence. What was overlooked?",
+    "correctAnswer": "B",
     "points": 5
   },
   {
     "year": 2,
     "bombNumber": 2,
     "questionNumber": 4,
-    "questionText": "Why is sequence more dangerous under exponential growth?",
+    "questionText": "Applying correct steps out of order under exponential growth produces catastrophic deviation. Why is this amplified?",
     "correctAnswer": "B",
     "points": 5
   },
@@ -198,8 +199,8 @@
     "year": 2,
     "bombNumber": 2,
     "questionNumber": 5,
-    "questionText": "What condition must be met before this anomaly can be cleared?",
-    "correctAnswer": "B",
+    "questionText": "Which condition must exist before the system allows stabilization at this stage?",
+    "correctAnswer": "C",
     "points": 5
   },
 
@@ -207,7 +208,7 @@
     "year": 2,
     "bombNumber": 3,
     "questionNumber": 1,
-    "questionText": "Why does the system reject correct fixes applied too early or too late?",
+    "questionText": "Local correctness improves yet instability spreads faster each cycle. Which inference fits best?",
     "correctAnswer": "B",
     "points": 5
   },
@@ -215,15 +216,15 @@
     "year": 2,
     "bombNumber": 3,
     "questionNumber": 2,
-    "questionText": "What causes instability to escalate beyond predictable limits?",
-    "correctAnswer": "B",
+    "questionText": "Multiple solutions are correct individually but only one matches the Realm’s expected trajectory. Which metric decides acceptance?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
     "year": 2,
     "bombNumber": 3,
     "questionNumber": 3,
-    "questionText": "What does the system prioritize once multiple logical streams align?",
+    "questionText": "Two states differ greatly in size yet produce identical system behavior. What principle explains this equivalence?",
     "correctAnswer": "C",
     "points": 5
   },
@@ -231,15 +232,15 @@
     "year": 2,
     "bombNumber": 3,
     "questionNumber": 4,
-    "questionText": "Why are some correct solutions rejected during final stabilization?",
-    "correctAnswer": "B",
+    "questionText": "Repetition, order, and exponential growth all validate, yet finalization still fails until one more property is satisfied. What is it?",
+    "correctAnswer": "C",
     "points": 5
   },
   {
     "year": 2,
     "bombNumber": 3,
     "questionNumber": 5,
-    "questionText": "When all system principles align, what is the final outcome?",
+    "questionText": "When ratios, patterns, sequences, and powers simultaneously agree, what hidden process is triggered according to system doctrine?",
     "correctAnswer": "C",
     "points": 5
   }
