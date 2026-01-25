@@ -7,6 +7,7 @@ import ApiResponse from "../utils/ApiResponse.js";
 import ApiError from "../utils/ApiError.js";
 import { emitLeaderboard } from "../utils/emitLeaderboard.js";
 import Round2Clues from "../models/round2_phase2_store_clue.model.js";
+import Round2_progressModel from "../models/Round2_progress.model.js";
 
 export const getRound2Phase1Questions = asyncHandler(async (req, res) => {
   const teamId = req.user._id;
@@ -35,7 +36,7 @@ export const getRound2Phase1Questions = asyncHandler(async (req, res) => {
       solvedCount: progress.solvedQuestions.length,
       tokens: progress.tokens,
       questions,
-    })
+    }),
   );
 });
 
@@ -48,7 +49,7 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
   }
 
   const question = await Round2Question.findOne({ questionId }).select(
-    "+correctAnswer"
+    "+correctAnswer",
   );
   if (!question) throw new ApiError(404, "Question not found");
 
@@ -92,8 +93,8 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
         tokens: progress.tokens,
         storeUnlocked: progress.storeUnlocked,
       },
-      "Correct answer"
-    )
+      "Correct answer",
+    ),
   );
 });
 
@@ -112,7 +113,7 @@ export const getStoreClues = asyncHandler(async (req, res) => {
   });
 
   const availableClues = allClues.filter(
-    (clue) => !progress.purchasedClues.includes(clue.clueId)
+    (clue) => !progress.purchasedClues.includes(clue.clueId),
   );
 
   return res.json(
@@ -122,8 +123,8 @@ export const getStoreClues = asyncHandler(async (req, res) => {
         tokensAvailable: progress.tokens,
         availableClues,
       },
-      "Store clues fetched"
-    )
+      "Store clues fetched",
+    ),
   );
 });
 
@@ -166,7 +167,38 @@ export const buyClue = asyncHandler(async (req, res) => {
           title: clue.title,
         },
       },
-      "Clue purchased successfully"
-    )
+      "Clue purchased successfully",
+    ),
+  );
+});
+
+export const getRound2Progress = asyncHandler(async (req, res) => {
+  const teamId = req.user._id;
+
+  const progress = await Round2Progress.findOne({ teamId });
+
+  if (!progress) {
+    return res.json(
+      new ApiResponse(
+        200,
+        { solved: [], score: 0, tokens: 0 },
+        "No Progress Yet",
+      ),
+    );
+  }
+
+  const team = await Team.findById(teamId).select("totalPoints");
+
+  return res.json(
+    new ApiResponse(
+      200,
+      {
+        solved: progress.solvedQuestions,
+        tokens: progress.tokens,
+        purchasedClues: progress.purchasedClues,
+        score: team.totalPoints || 0,
+      },
+      "Round 2 Progress",
+    ),
   );
 });

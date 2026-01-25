@@ -4,6 +4,7 @@ import {
   submitRound2Phase1Answer,
   getStoreClues,
   buyClue,
+  getRound2Progress,
 } from "../controllers/Round2.controller.js";
 
 import { protect } from "../middlewares/auth.middleware.js";
@@ -14,5 +15,6 @@ router.get("/phase1/questions", protect, getRound2Phase1Questions);
 router.post("/phase1/submit", protect, submitRound2Phase1Answer);
 router.get("/phase2/store", protect, getStoreClues);
 router.post("/phase2/store/buy", protect, buyClue);
+router.get("/progress", protect, getRound2Progress);
 
 export default router;
