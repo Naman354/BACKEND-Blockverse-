@@ -112,7 +112,7 @@ const loginTeam = asyncHandler(async (req, res) => {
   const accessToken = signAccessToken(team);
   const refreshToken = signRefreshToken(team);
 
-  const dynamicScore = await calculateTeamScore(team_id);
+  const dynamicScore = await calculateTeamScore(team._id);
   const teamResponse = team.toObject();
   delete teamResponse.password;
   teamResponse.totalPoints = dynamicScore;
