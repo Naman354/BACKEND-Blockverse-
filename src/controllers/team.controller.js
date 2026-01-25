@@ -114,14 +114,15 @@ const loginTeam = asyncHandler(async (req, res) => {
   const teamResponse = team.toObject();
   delete teamResponse.password;
 
-  return res.status(200).json(
-    new ApiResponse(
-      200,
-      { team: teamResponse, accessToken, refreshToken },
-      "Team login successful"
-    )
-  );
+  return res
+    .status(200)
+    .json(
+      new ApiResponse(
+        200,
+        { team: teamResponse, accessToken, refreshToken },
+        "Team login successful"
+      )
+    );
 });
-
 
 export { registerTeam, loginTeam };
