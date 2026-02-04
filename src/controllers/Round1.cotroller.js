@@ -5,6 +5,7 @@ import asyncHandler from "../utils/asyncHandler.js";
 import ApiError from "../utils/ApiError.js";
 import ApiResponse from "../utils/ApiResponse.js";
 import { emitLeaderboard } from "../utils/emitLeaderboard.js";
+import { calculateTeamScore } from "../utils/calculateScore.js";
 
 export const getRound1Questions = asyncHandler(async (req, res) => {
   const teamId = req.user._id;
@@ -29,7 +30,7 @@ export const getRound1Questions = asyncHandler(async (req, res) => {
       totalQuestions: questions.length,
       solvedCount: progress.solvedQuestions.length,
       questions,
-    })
+    }),
   );
 });
 
@@ -42,7 +43,7 @@ export const submitRound1Answer = asyncHandler(async (req, res) => {
   }
 
   const question = await Round1Question.findOne({ questionId }).select(
-    "+correctAnswer +pointReward"
+    "+correctAnswer +pointReward",
   );
 
   if (!question) {
@@ -62,7 +63,7 @@ export const submitRound1Answer = asyncHandler(async (req, res) => {
 
   if (correct !== selected) {
     return res.json(
-      new ApiResponse(200, { correct: false }, "Incorrect answer")
+      new ApiResponse(200, { correct: false }, "Incorrect answer"),
     );
   }
 
@@ -72,11 +73,6 @@ export const submitRound1Answer = asyncHandler(async (req, res) => {
   }
 
   await progress.save();
-
-  await Team.findByIdAndUpdate(teamId, {
-    $inc: { totalPoints: question.pointReward },
-    // $set: { "rounds.round1Completed": progress.completed },
-  });
 
   await emitLeaderboard(req);
 
@@ -90,20 +86,20 @@ export const getRound1Progress = asyncHandler(async (req, res) => {
 
   if (!progress) {
     return res.json(
-      new ApiResponse(200, { solved: [], score: 0 }, "No progress yet")
+      new ApiResponse(200, { solved: [], score: 0 }, "No progress yet"),
     );
   }
 
-  const team = await Team.findById(teamId).select("totalPoints");
+  const score = await calculateTeamScore(teamId);
 
   return res.json(
     new ApiResponse(
       200,
       {
         solved: progress.solvedQuestions,
-        score: team.totalPoints || 0,
+        score,
       },
-      "Round 1 progress"
-    )
+      "Round 1 progress",
+    ),
   );
 });

@@ -6,6 +6,7 @@ import asyncHandler from "../utils/asyncHandler.js";
 import ApiResponse from "../utils/ApiResponse.js";
 import ApiError from "../utils/ApiError.js";
 import nodemailer from "nodemailer";
+import { calculateTeamScore } from "../utils/calculateScore.js";
 
 dotenv.config();
 
@@ -43,7 +44,7 @@ const registerTeam = asyncHandler(async (req, res) => {
   if (!teamId || !password || !year || !members?.length) {
     throw new ApiError(
       400,
-      "Team ID, password, year and team members are required"
+      "Team ID, password, year and team members are required",
     );
   }
 
@@ -111,8 +112,10 @@ const loginTeam = asyncHandler(async (req, res) => {
   const accessToken = signAccessToken(team);
   const refreshToken = signRefreshToken(team);
 
+  const dynamicScore = await calculateTeamScore(team._id);
   const teamResponse = team.toObject();
   delete teamResponse.password;
+  teamResponse.totalPoints = dynamicScore;
 
   return res
     .status(200)
@@ -120,8 +123,8 @@ const loginTeam = asyncHandler(async (req, res) => {
       new ApiResponse(
         200,
         { team: teamResponse, accessToken, refreshToken },
-        "Team login successful"
-      )
+        "Team login successful",
+      ),
     );
 });
 
