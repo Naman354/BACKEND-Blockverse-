@@ -63,14 +63,16 @@ export const initRound3 = asyncHandler(async (req, res) => {
     });
   }
 
-  const elapsed = Date.now() - progress.startedAt.getTime();
-  const remainingTime = Math.max(ROUND3_DURATION_MS - elapsed, 0);
+  // const elapsed = Date.now() - progress.startedAt.getTime();
+  // const remainingTime = Math.max(ROUND3_DURATION_MS - elapsed, 0);
 
-  if (remainingTime === 0 && progress.status !== "TIME_UP") {
-    progress.status = "TIME_UP";
-    progress.endedAt = new Date();
-    await progress.save();
-  }
+  // if (remainingTime === 0 && progress.status !== "TIME_UP") {
+  //   progress.status = "TIME_UP";
+  //   progress.endedAt = new Date();
+  //   await progress.save();
+  // }
+  const remainingTime = ROUND3_DURATION_MS; // fake time for testing phase
+
 
   return res.json(
     new ApiResponse(200, {
@@ -105,14 +107,14 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
     throw new ApiError(403, `Round is ${progress.status}`);
   }
 
-  const elapsed = Date.now() - progress.startedAt.getTime();
-  if (elapsed >= ROUND3_DURATION_MS) {
-    progress.status = "TIME_UP";
-    progress.endedAt = new Date();
-    await progress.save();
+  // const elapsed = Date.now() - progress.startedAt.getTime();
+  // if (elapsed >= ROUND3_DURATION_MS) {
+  //   progress.status = "TIME_UP";
+  //   progress.endedAt = new Date();
+  //   await progress.save();
 
-    throw new ApiError(403, "Time expired");
-  }
+  //   throw new ApiError(403, "Time expired");
+  // }
 
   const bomb = progress.bombs.find(
     (b) => b.bombNumber === Number(bombNumber)
