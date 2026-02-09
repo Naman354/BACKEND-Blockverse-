@@ -7,16 +7,23 @@ import connectDB from "./src/db/db.connect.js";
 
 dotenv.config();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://blockverse-iota.vercel.app",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 const PORT = process.env.PORT || 8080;
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"],
+    origin: allowedOrigins,
     credentials: true,
   },
 });
+
 
 app.use((req, res, next) => {
   req.io = io;

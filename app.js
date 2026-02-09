@@ -13,14 +13,20 @@ import { errorHandler } from "./src/middlewares/errorHandler.js";
 
 dotenv.config();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://blockverse-iota.vercel.app",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 const app = express();
-const { link1, link2 } = process.env;
+//const { link1, link2 } = process.env;
 
 // app.use(securityHeaders);
 // app.use(hpp());
 app.use(
   cors({
-    origin: ["http://localhost:5173", link1, link2],
+    origin: allowedOrigins,
     credentials: true,
   })
 );
@@ -31,6 +37,8 @@ app.use(express.urlencoded({ extended: true }));
 // app.use("/api", apiLimiter);
 // app.use(sanitizeRequest);
 
+app.set("trust proxy", 1);
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "supersecretkey",
@@ -38,11 +46,13 @@ app.use(
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
-      secure: false,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 24 * 60 * 60 * 1000,
     },
   })
 );
+
 
 app.get("/", (req, res) => {
   res.send("Blockverse Backend is running.....");
