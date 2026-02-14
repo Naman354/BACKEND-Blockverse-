@@ -28,7 +28,7 @@ app.use(
   cors({
     origin: allowedOrigins,
     credentials: true,
-  })
+  }),
 );
 
 app.use(express.json());
@@ -50,9 +50,8 @@ app.use(
       sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 24 * 60 * 60 * 1000,
     },
-  })
+  }),
 );
-
 
 app.get("/", (req, res) => {
   res.send("Blockverse Backend is running.....");

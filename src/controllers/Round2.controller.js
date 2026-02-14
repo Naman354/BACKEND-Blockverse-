@@ -52,6 +52,7 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
   const question = await Round2Question.findOne({ questionId }).select(
     "+correctAnswer",
   );
+  console.log("Questions...", question);
   if (!question) throw new ApiError(404, "Question not found");
 
   const progress =

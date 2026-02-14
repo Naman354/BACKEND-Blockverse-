@@ -45,7 +45,7 @@ const round1QuestionSchema = new mongoose.Schema(
       default: 10,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const Round1Question = mongoose.model("Round1Question", round1QuestionSchema);

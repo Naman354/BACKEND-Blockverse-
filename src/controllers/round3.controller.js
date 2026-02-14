@@ -20,50 +20,49 @@ export const initRound3 = asyncHandler(async (req, res) => {
   let progress = await Round3Progress.findOne({ teamId });
 
   if (!progress) {
-  const team = await Team.findById(teamId).select("year");
-  if (!team) {
-    throw new ApiError(404, "Team not found");
-  }
-
-  const questions = await Round3Question.find({ year: team.year }).select(
-    "_id bombNumber questionNumber questionText options points"
-  );
-
-  if (!questions.length) {
-    throw new ApiError(500, "Round 3 questions not configured");
-  }
-
-  const bombsMap = {};
-
-  for (const q of questions) {
-    if (!bombsMap[q.bombNumber]) {
-      bombsMap[q.bombNumber] = {
-        bombNumber: q.bombNumber,
-        mistakes: 0,
-        questions: [],
-      };
+    const team = await Team.findById(teamId).select("year");
+    if (!team) {
+      throw new ApiError(404, "Team not found");
     }
 
-    bombsMap[q.bombNumber].questions.push({
-      questionId: q._id,
-      questionNumber: q.questionNumber,
-      questionText: q.questionText,
-      options: q.options, // ✅ now included properly
-      points: q.points,
-      solved: false,
-      attempts: 0,
+    const questions = await Round3Question.find({ year: team.year }).select(
+      "_id bombNumber questionNumber questionText options points",
+    );
+
+    if (!questions.length) {
+      throw new ApiError(500, "Round 3 questions not configured");
+    }
+
+    const bombsMap = {};
+
+    for (const q of questions) {
+      if (!bombsMap[q.bombNumber]) {
+        bombsMap[q.bombNumber] = {
+          bombNumber: q.bombNumber,
+          mistakes: 0,
+          questions: [],
+        };
+      }
+
+      bombsMap[q.bombNumber].questions.push({
+        questionId: q._id,
+        questionNumber: q.questionNumber,
+        questionText: q.questionText,
+        options: q.options,
+        points: q.points,
+        solved: false,
+        attempts: 0,
+      });
+    }
+
+    progress = await Round3Progress.create({
+      teamId,
+      status: "IN_PROGRESS",
+      startedAt: new Date(),
+      bombs: Object.values(bombsMap),
+      scoreAdded: 0,
     });
   }
-
-  progress = await Round3Progress.create({
-    teamId,
-    status: "IN_PROGRESS",
-    startedAt: new Date(),
-    bombs: Object.values(bombsMap),
-    scoreAdded: 0,
-  });
-}
-
 
   // const elapsed = Date.now() - progress.startedAt.getTime();
   // const remainingTime = Math.max(ROUND3_DURATION_MS - elapsed, 0);
@@ -75,13 +74,12 @@ export const initRound3 = asyncHandler(async (req, res) => {
   // }
   const remainingTime = ROUND3_DURATION_MS; // fake time for testing phase
 
-
   return res.json(
     new ApiResponse(200, {
       status: progress.status,
       timeRemainingMs: remainingTime,
       bombs: progress.bombs,
-    })
+    }),
   );
 });
 export const submitRound3Answer = asyncHandler(async (req, res) => {
@@ -92,12 +90,11 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
     throw new ApiError(401, "Unauthorized");
   }
 
-  if (
-    bombNumber === undefined ||
-    questionNumber === undefined ||
-    !answer
-  ) {
-    throw new ApiError(400, "bombNumber, questionNumber and answer are required");
+  if (bombNumber === undefined || questionNumber === undefined || !answer) {
+    throw new ApiError(
+      400,
+      "bombNumber, questionNumber and answer are required",
+    );
   }
 
   const progress = await Round3Progress.findOne({ teamId });
@@ -118,16 +115,14 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
   //   throw new ApiError(403, "Time expired");
   // }
 
-  const bomb = progress.bombs.find(
-    (b) => b.bombNumber === Number(bombNumber)
-  );
+  const bomb = progress.bombs.find((b) => b.bombNumber === Number(bombNumber));
 
   if (!bomb) {
     throw new ApiError(404, "Bomb not found");
   }
 
   const question = bomb.questions.find(
-    (q) => q.questionNumber === Number(questionNumber)
+    (q) => q.questionNumber === Number(questionNumber),
   );
 
   if (!question) {
@@ -136,12 +131,12 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
 
   if (question.solved) {
     return res.json(
-      new ApiResponse(200, { status: "ALREADY_SOLVED" }, "Already solved")
+      new ApiResponse(200, { status: "ALREADY_SOLVED" }, "Already solved"),
     );
   }
 
   const dbQuestion = await Round3Question.findById(question.questionId).select(
-    "correctAnswer points"
+    "correctAnswer points",
   );
 
   if (!dbQuestion) {
@@ -150,8 +145,9 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
 
   const normalizedAnswer = String(answer).trim().toUpperCase();
 
-  if ( normalizedAnswer === String(dbQuestion.correctAnswer).trim().toUpperCase())
- {
+  if (
+    normalizedAnswer === String(dbQuestion.correctAnswer).trim().toUpperCase()
+  ) {
     question.solved = true;
 
     progress.scoreAdded += dbQuestion.points;
@@ -170,8 +166,8 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
           pointsAwarded: dbQuestion.points,
           totalRound3Score: progress.scoreAdded,
         },
-        "Correct answer"
-      )
+        "Correct answer",
+      ),
     );
   }
 
@@ -184,10 +180,7 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
 
     await progress.save();
 
-    throw new ApiError(
-      403,
-      "Too many incorrect attempts. Team disqualified."
-    );
+    throw new ApiError(403, "Too many incorrect attempts. Team disqualified.");
   }
 
   await progress.save();
