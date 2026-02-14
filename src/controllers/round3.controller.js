@@ -20,48 +20,50 @@ export const initRound3 = asyncHandler(async (req, res) => {
   let progress = await Round3Progress.findOne({ teamId });
 
   if (!progress) {
-    const team = await Team.findById(teamId).select("year");
-    if (!team) {
-      throw new ApiError(404, "Team not found");
+  const team = await Team.findById(teamId).select("year");
+  if (!team) {
+    throw new ApiError(404, "Team not found");
+  }
+
+  const questions = await Round3Question.find({ year: team.year }).select(
+    "_id bombNumber questionNumber questionText options points"
+  );
+
+  if (!questions.length) {
+    throw new ApiError(500, "Round 3 questions not configured");
+  }
+
+  const bombsMap = {};
+
+  for (const q of questions) {
+    if (!bombsMap[q.bombNumber]) {
+      bombsMap[q.bombNumber] = {
+        bombNumber: q.bombNumber,
+        mistakes: 0,
+        questions: [],
+      };
     }
 
-    const questions = await Round3Question.find({ year: team.year }).select(
-      "_id bombNumber questionNumber questionText points"
-    );
-
-    if (!questions.length) {
-      throw new ApiError(500, "Round 3 questions not configured");
-    }
-
-    const bombsMap = {};
-
-    for (const q of questions) {
-      if (!bombsMap[q.bombNumber]) {
-        bombsMap[q.bombNumber] = {
-          bombNumber: q.bombNumber,
-          mistakes: 0,
-          questions: [],
-        };
-      }
-
-      bombsMap[q.bombNumber].questions.push({
-        questionId: q._id,
-        questionNumber: q.questionNumber,
-        questionText: q.questionText,
-        points: q.points,
-        solved: false,
-        attempts: 0,
-      });
-    }
-
-    progress = await Round3Progress.create({
-      teamId,
-      status: "IN_PROGRESS",
-      startedAt: new Date(),
-      bombs: Object.values(bombsMap),
-      scoreAdded: 0,
+    bombsMap[q.bombNumber].questions.push({
+      questionId: q._id,
+      questionNumber: q.questionNumber,
+      questionText: q.questionText,
+      options: q.options, // ✅ now included properly
+      points: q.points,
+      solved: false,
+      attempts: 0,
     });
   }
+
+  progress = await Round3Progress.create({
+    teamId,
+    status: "IN_PROGRESS",
+    startedAt: new Date(),
+    bombs: Object.values(bombsMap),
+    scoreAdded: 0,
+  });
+}
+
 
   // const elapsed = Date.now() - progress.startedAt.getTime();
   // const remainingTime = Math.max(ROUND3_DURATION_MS - elapsed, 0);
@@ -148,7 +150,8 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
 
   const normalizedAnswer = String(answer).trim().toUpperCase();
 
-  if (normalizedAnswer === dbQuestion.correctAnswer) {
+  if ( normalizedAnswer === String(dbQuestion.correctAnswer).trim().toUpperCase())
+ {
     question.solved = true;
 
     progress.scoreAdded += dbQuestion.points;

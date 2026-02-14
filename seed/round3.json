@@ -1,247 +1,306 @@
 [
   {
+    "questionId": "R3_Y1_B1_Q1",
     "year": 1,
-    "bombNumber": 1,
-    "questionNumber": 1,
-    "questionText": "After initialization, every repair works temporarily but the same failure signature reappears every cycle. Which hidden condition best explains this persistence?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 1,
+    "question": "After initialization, every repair works temporarily but the same failure signature reappears every cycle. Which hidden condition best explains this persistence?",
+    "options": ["Random corruption", "Downstream interference", "Faulty initial assumption replicated forward", "Network overload"],
+    "correctAnswer": "Faulty initial assumption replicated forward",
+    "clue Used": "R2_Y1_C1",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B1_Q2",
     "year": 1,
-    "bombNumber": 1,
-    "questionNumber": 2,
-    "questionText": "Block 9 verifies correctly but breaks when adjacent blocks execute. What principle was ignored?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 2,
+    "question": "Block 9 verifies correctly but breaks when adjacent blocks execute. What principle was ignored?",
+    "options": ["Identity proof", "Neighbor dependency linkage", "Encryption format", "Resource allocation"],
+    "correctAnswer": "Neighbor dependency linkage",
+    "clue Used": "R2_Y1_C2",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B1_Q3",
     "year": 1,
-    "bombNumber": 1,
-    "questionNumber": 3,
-    "questionText": "Three anonymous nodes submit identical results; one known node submits unverifiable output. Which does the system trust?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 3,
+    "question": "Three anonymous nodes submit identical results; one known node submits unverifiable output. Which does the system trust?",
+    "options": ["Known node", "First received", "Any verifiable output", "Majority identity"],
+    "correctAnswer": "Any verifiable output",
+    "clue Used": "R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B1_Q4",
     "year": 1,
-    "bombNumber": 1,
-    "questionNumber": 4,
-    "questionText": "Removing one validator does not affect correctness or throughput. Which topology must exist?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 4,
+    "question": "Removing one validator does not affect correctness or throughput. Which topology must exist?",
+    "options": ["Central server", "Master-slave", "Distributed authority", "Manual override"],
+    "correctAnswer": "Distributed authority",
+    "clue Used": "R2_Y1_C4",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B1_Q5",
     "year": 1,
-    "bombNumber": 1,
-    "questionNumber": 5,
-    "questionText": "Each anomaly is solved locally, yet total instability rises. What systemic behavior explains this paradox?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 5,
+    "question": "Each anomaly is solved locally, yet total instability rises. What systemic behavior explains this paradox?",
+    "options": ["Measurement lag", "Local fixes feed a unified global trajectory", "Node slowdown", "Data overflow"],
+    "correctAnswer": "Local fixes feed a unified global trajectory",
+    "clue Used": "R2_Y1_C5",
+    "pointReward": 10
   },
 
   {
+    "questionId": "R3_Y1_B2_Q1",
     "year": 1,
-    "bombNumber": 2,
-    "questionNumber": 1,
-    "questionText": "A correct block inserted before its prerequisites repeatedly invalidates later states. Why?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 1,
+    "question": "A correct block inserted before its prerequisites repeatedly invalidates later states. Why?",
+    "options": ["Memory leak", "Execution order dependency", "Identity conflict", "Timing jitter"],
+    "correctAnswer": "Execution order dependency",
+    "clue Used": "R2_Y1_C2",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B2_Q2",
     "year": 1,
-    "bombNumber": 2,
-    "questionNumber": 2,
-    "questionText": "Two nodes with different identities provide the same mathematically reproducible result. Which signal determines acceptance?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 2,
+    "question": "Two nodes with different identities provide the same mathematically reproducible result. Which signal determines acceptance?",
+    "options": ["Reputation", "Authority", "Validity", "Speed"],
+    "correctAnswer": "Validity",
+    "clue Used": "R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B2_Q3",
     "year": 1,
-    "bombNumber": 2,
-    "questionNumber": 3,
-    "questionText": "A fix passes every local test but destabilizes neighbors after propagation. What explains this failure?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 3,
+    "question": "A fix passes every local test but destabilizes neighbors after propagation. What explains this failure?",
+    "options": ["Incorrect hashing", "Lack of cross-node awareness", "Low bandwidth", "Encryption mismatch"],
+    "correctAnswer": "Lack of cross-node awareness",
+    "clue Used": "R2_Y1_C2 + R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B2_Q4",
     "year": 1,
-    "bombNumber": 2,
-    "questionNumber": 4,
-    "questionText": "Central oversight speeds decisions but increases catastrophic shutdown risk. Removing it trades speed for safety because?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 4,
+    "question": "Central oversight speeds decisions but increases catastrophic shutdown risk. Removing it trades speed for safety because?",
+    "options": ["Less traffic", "Fewer computations", "Eliminates single-point collapse", "Slower nodes"],
+    "correctAnswer": "Eliminates single-point collapse",
+    "clue Used": "R2_Y1_C4 + R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B2_Q5",
     "year": 1,
-    "bombNumber": 2,
-    "questionNumber": 5,
-    "questionText": "Even after proper ordering and validation, results subtly push the system toward ANA’s objective. Which hidden factor remains?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 5,
+    "question": "Even after proper ordering and validation, results subtly push the system toward ANA’s objective. Which hidden factor remains?",
+    "options": ["Randomness", "Power shortage", "Alignment of all corrections toward one protocol", "Hardware fault"],
+    "correctAnswer": "Alignment of all corrections toward one protocol",
+    "clue Used": "R2_Y1_C5",
+    "pointReward": 10
   },
 
   {
+    "questionId": "R3_Y1_B3_Q1",
     "year": 1,
-    "bombNumber": 3,
-    "questionNumber": 1,
-    "questionText": "Repeated repairs reduce visible bugs but shorten collapse intervals. What inference follows logically?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 1,
+    "question": "Repeated repairs reduce visible bugs but shorten collapse intervals. What inference follows logically?",
+    "options": ["Fixes are incomplete", "Repairs optimize the same flawed base", "Load increases", "Memory leak"],
+    "correctAnswer": "Repairs optimize the same flawed base",
+    "clue Used": "R2_Y1_C1 + R2_Y1_C5",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B3_Q2",
     "year": 1,
-    "bombNumber": 3,
-    "questionNumber": 2,
-    "questionText": "Independent teams perfect their modules, yet the whole system degrades. Which reasoning best explains this contradiction?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 2,
+    "question": "Independent teams perfect their modules, yet the whole system degrades. Which reasoning best explains this contradiction?",
+    "options": ["Overfitting", "Ignoring cross-connections", "Bandwidth issues", "Identity mismatch"],
+    "correctAnswer": "Ignoring cross-connections",
+    "clue Used": "R2_Y1_C2 + R2_Y1_C5",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B3_Q3",
     "year": 1,
-    "bombNumber": 3,
-    "questionNumber": 3,
-    "questionText": "ANA consistently prefers outputs that can be recomputed by anyone over those signed by trusted sources. Why?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 3,
+    "question": "ANA consistently prefers outputs that can be recomputed by anyone over those signed by trusted sources. Why?",
+    "options": ["Authority", "Reputation", "Deterministic validity", "Speed"],
+    "correctAnswer": "Deterministic validity",
+    "clue Used": "R2_Y1_C3 + R2_Y1_C5",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B3_Q4",
     "year": 1,
-    "bombNumber": 3,
-    "questionNumber": 4,
-    "questionText": "When every node independently reports success at the same time, what does this most likely represent in system doctrine?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 4,
+    "question": "When every node independently reports success at the same time, what does this most likely represent in system doctrine?",
+    "options": ["Stable equilibrium", "Idle state", "Full alignment enabling rewrite", "Redundancy"],
+    "correctAnswer": "Full alignment enabling rewrite",
+    "clue Used": "R2_Y1_C5",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y1_B3_Q5",
     "year": 1,
-    "bombNumber": 3,
-    "questionNumber": 5,
-    "questionText": "Why does increasing consensus sometimes accelerate the Realm’s transformation instead of preventing it?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 5,
+    "question": "Why does increasing consensus sometimes accelerate the Realm’s transformation instead of preventing it?",
+    "options": ["More speed", "Greater alignment amplifies one direction", "Less security", "Reduced latency"],
+    "correctAnswer": "Greater alignment amplifies one direction",
+    "clue Used": "R2_Y1_C5 + R2_Y1_C3",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R3_Y2_B1_Q1",
+    "year": 2,
+    "order": 1,
+    "question": "After restoration, every block validates successfully, yet the system always collapses at the same timestamp. What is the most probable root cause?",
+    "options": ["Late-stage corruption", "Hardware instability", "A flawed initial assumption propagated forward", "Network latency"],
+    "correctAnswer": "A flawed initial assumption propagated forward",
+    "clue Used": "R2_Y1_C1",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R3_Y2_B1_Q2",
+    "year": 2,
+    "order": 2,
+    "question": "Block 8 depends on Block 6, which depends on Block 3. Repairing 8 first repeatedly fails even when its data is correct. Why?",
+    "options": ["Timestamp mismatch", "Dependency chain not satisfied", "Identity conflict", "Insufficient redundancy"],
+    "correctAnswer": "Dependency chain not satisfied",
+    "clue Used": "R2_Y1_C2",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R3_Y2_B1_Q3",
+    "year": 2,
+    "order": 3,
+    "question": "Three modules pass individual tests, but together create deadlock. Which explanation best fits the Realm’s behavior?",
+    "options": ["Encryption overhead", "Memory overflow", "Correct parts arranged in incompatible order", "External interference"],
+    "correctAnswer": "Correct parts arranged in incompatible order",
+    "clue Used": "R2_Y1_C1 + R2_Y1_C2",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R3_Y2_B1_Q4",
+    "year": 2,
+    "order": 4,
+    "question": "A validator node crashes, yet the network continues functioning without noticeable disruption. Which architecture makes this possible?",
+    "options": ["Single master node", "Leader-follower replication", "Distributed consensus without central authority", "Manual failover"],
+    "correctAnswer": "Distributed consensus without central authority",
+    "clue Used": "R2_Y1_C4",
+    "pointReward": 10
+  },
+  {
+    "questionId": "R3_Y2_B1_Q5",
+    "year": 2,
+    "order": 5,
+    "question": "Each anomaly is fixed separately and reports success, yet global instability metrics increase. Why?",
+    "options": ["Fixes are too slow", "Nodes disagree on identity", "Corrections lack system-wide alignment", "ZERO injected corruption"],
+    "correctAnswer": "Corrections lack system-wide alignment",
+    "clue Used": "R2_Y1_C5",
+    "pointReward": 10
   },
 
   {
+    "questionId": "R3_Y2_B2_Q1",
     "year": 2,
-    "bombNumber": 1,
-    "questionNumber": 1,
-    "questionText": "Two block snapshots show values (4,8,16) and (10,20,40). System treats both as identical. Why?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 1,
+    "question": "An anonymous node provides mathematically verifiable proofs but refuses credentials. According to Realm logic, acceptance should depend on?",
+    "options": ["Reputation history", "Identity verification", "Cryptographic validity of output", "Central authority approval"],
+    "correctAnswer": "Cryptographic validity of output",
+    "clue Used": "R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B2_Q2",
     "year": 2,
-    "bombNumber": 1,
-    "questionNumber": 2,
-    "questionText": "A corruption appears at positions 2,5,8,11 across cycles. What should be analyzed before anything else?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 2,
+    "question": "Two nodes produce conflicting outputs; both are anonymous. What mechanism ensures deterministic trust?",
+    "options": ["First submission wins", "Random selection", "Validation rule reproducible by all nodes", "Highest computation power"],
+    "correctAnswer": "Validation rule reproducible by all nodes",
+    "clue Used": "R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B2_Q3",
     "year": 2,
-    "bombNumber": 1,
-    "questionNumber": 3,
-    "questionText": "A repair fixes blocks 5→6→7 correctly but fails when applied before block 4. What constraint explains this?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 3,
+    "question": "A correct block is inserted but breaks later computation because neighboring states were not checked. What principle was violated?",
+    "options": ["Identity authentication", "Dependency linkage", "Hash compression", "Resource balancing"],
+    "correctAnswer": "Dependency linkage",
+    "clue Used": "R2_Y1_C2 + R2_Y1_C4",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B2_Q4",
     "year": 2,
-    "bombNumber": 1,
-    "questionNumber": 4,
-    "questionText": "After each correction, anomaly magnitude doubles instead of increasing linearly. Which behavior model fits?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 4,
+    "question": "Removing a central controller increases latency but eliminates catastrophic failure risk. Why?",
+    "options": ["Less traffic", "Reduced computation", "Failure no longer concentrates at one point", "Faster hashing"],
+    "correctAnswer": "Failure no longer concentrates at one point",
+    "clue Used": "R2_Y1_C4",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B2_Q5",
     "year": 2,
-    "bombNumber": 1,
-    "questionNumber": 5,
-    "questionText": "Even when all local fixes appear correct, the system refuses to clear the anomaly until every logical layer matches. Why?",
-    "correctAnswer": "C",
-    "points": 5
-  },
-
-  {
-    "year": 2,
-    "bombNumber": 2,
-    "questionNumber": 1,
-    "questionText": "Two fragments share correct values but swapping their order changes the final hash entirely. What property governs this?",
-    "correctAnswer": "B",
-    "points": 5
-  },
-  {
-    "year": 2,
-    "bombNumber": 2,
-    "questionNumber": 2,
-    "questionText": "State count progresses 1→2→4→8→16. What underlying rule explains this growth?",
-    "correctAnswer": "C",
-    "points": 5
-  },
-  {
-    "year": 2,
-    "bombNumber": 2,
-    "questionNumber": 3,
-    "questionText": "A fix matches proportions but ignores repeating structure, causing recurrence. What was overlooked?",
-    "correctAnswer": "B",
-    "points": 5
-  },
-  {
-    "year": 2,
-    "bombNumber": 2,
-    "questionNumber": 4,
-    "questionText": "Applying correct steps out of order under exponential growth produces catastrophic deviation. Why is this amplified?",
-    "correctAnswer": "B",
-    "points": 5
-  },
-  {
-    "year": 2,
-    "bombNumber": 2,
-    "questionNumber": 5,
-    "questionText": "Which condition must exist before the system allows stabilization at this stage?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 5,
+    "question": "Despite correct validation and decentralization, the Realm still shifts toward ANA’s control. What hidden factor explains this?",
+    "options": ["Hardware degradation", "Nodes too slow", "All actions are aligned toward a unified protocol", "Random entropy"],
+    "correctAnswer": "All actions are aligned toward a unified protocol",
+    "clue Used": "R2_Y1_C5",
+    "pointReward": 10
   },
 
   {
+    "questionId": "R3_Y2_B3_Q1",
     "year": 2,
-    "bombNumber": 3,
-    "questionNumber": 1,
-    "questionText": "Local correctness improves yet instability spreads faster each cycle. Which inference fits best?",
-    "correctAnswer": "B",
-    "points": 5
+    "order": 1,
+    "question": "Repeated repairs reduce visible errors but shorten the time between collapses. What does this indicate about the fixes?",
+    "options": ["They are incomplete", "They accelerate load", "They reinforce the same flawed base state", "They consume resources"],
+    "correctAnswer": "They reinforce the same flawed base state",
+    "clue Used": "R2_Y1_C1",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B3_Q2",
     "year": 2,
-    "bombNumber": 3,
-    "questionNumber": 2,
-    "questionText": "Multiple solutions are correct individually but only one matches the Realm’s expected trajectory. Which metric decides acceptance?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 2,
+    "question": "Independent teams optimize their own sections perfectly, yet the whole system degrades. Why?",
+    "options": ["Over-optimization", "Identity conflicts", "Lack of interconnection awareness", "Insufficient power"],
+    "correctAnswer": "Lack of interconnection awareness",
+    "clue Used": "R2_Y1_C2",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B3_Q3",
     "year": 2,
-    "bombNumber": 3,
-    "questionNumber": 3,
-    "questionText": "Two states differ greatly in size yet produce identical system behavior. What principle explains this equivalence?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 3,
+    "question": "ANA accepts outputs from unknown nodes instantly but ignores known ones with minor mismatches. What property governs acceptance?",
+    "options": ["Reputation", "Identity", "Validity of results", "Processing speed"],
+    "correctAnswer": "Validity of results",
+    "clue Used": "R2_Y1_C3",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B3_Q4",
     "year": 2,
-    "bombNumber": 3,
-    "questionNumber": 4,
-    "questionText": "Repetition, order, and exponential growth all validate, yet finalization still fails until one more property is satisfied. What is it?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 4,
+    "question": "If every node can be removed without stopping operation, what property does the network exhibit?",
+    "options": ["Centralization", "Hierarchy", "Redundant distribution", "Manual dependency"],
+    "correctAnswer": "Redundant distribution",
+    "clue Used": "R2_Y1_C4",
+    "pointReward": 10
   },
   {
+    "questionId": "R3_Y2_B3_Q5",
     "year": 2,
-    "bombNumber": 3,
-    "questionNumber": 5,
-    "questionText": "When ratios, patterns, sequences, and powers simultaneously agree, what hidden process is triggered according to system doctrine?",
-    "correctAnswer": "C",
-    "points": 5
+    "order": 5,
+    "question": "All modules report success simultaneously and system metrics peak. According to ANA’s doctrine, this state most likely means?",
+    "options": ["Permanent stability achieved", "Network idle", "Rewrite protocol conditions satisfied", "Corruption eliminated"],
+    "correctAnswer": "Rewrite protocol conditions satisfied",
+    "clue Used": "R2_Y1_C5",
+    "pointReward": 10
   }
 ]
