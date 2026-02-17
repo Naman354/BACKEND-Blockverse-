@@ -6,6 +6,7 @@ import {
   buyClue,
   getRound2Progress,
 } from "../controllers/Round2.controller.js";
+import { startRound2Phase1Question } from "../controllers/Round2startQuestion.js";
 
 import { protect } from "../middlewares/auth.middleware.js";
 
@@ -13,6 +14,7 @@ const router = express.Router();
 
 router.get("/phase1/questions", protect, getRound2Phase1Questions);
 router.post("/phase1/submit", protect, submitRound2Phase1Answer);
+router.post("/phase1/start", protect, startRound2Phase1Question);
 router.get("/phase2/store", protect, getStoreClues);
 router.post("/phase2/store/buy", protect, buyClue);
 router.get("/progress", protect, getRound2Progress);

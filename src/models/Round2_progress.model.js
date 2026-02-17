@@ -28,6 +28,10 @@ const round2ProgressSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    activeQuestion: {
+      questionId: String,
+      startedAt: Date,
+    },
   },
   { timestamps: true }
 );

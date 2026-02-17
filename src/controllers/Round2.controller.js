@@ -63,6 +63,25 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
     return res.json(new ApiResponse(200, null, "Already solved"));
   }
 
+  const QUESTION_DURATION_MS = 20 * 1000;
+
+if (
+  !progress.activeQuestion ||
+  progress.activeQuestion.questionId !== questionId
+) {
+  throw new ApiError(400, "Question not started");
+}
+
+const elapsed =
+  Date.now() - new Date(progress.activeQuestion.startedAt).getTime();
+
+if (elapsed > QUESTION_DURATION_MS) {
+  progress.activeQuestion = null;
+  await progress.save();
+  throw new ApiError(403, "Time expired for this question");
+}
+
+
   const correct = String(question.correctAnswer).trim().toLowerCase();
   const submitted = String(answer).trim().toLowerCase();
 
@@ -72,6 +91,8 @@ export const submitRound2Phase1Answer = asyncHandler(async (req, res) => {
 
   progress.solvedQuestions.push(questionId);
   progress.tokens += question.tokenReward;
+  progress.activeQuestion = null;
+
 
   if (progress.solvedQuestions.length === 20) {
     progress.phase = 2;
