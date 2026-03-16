@@ -18,6 +18,15 @@ export const initRound2 = asyncHandler(async (req, res) => {
 
   let progress = await Round2Progress.findOne({ teamId });
 
+  const shuffleArray = (arr) => {
+    const array = [...arr];
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
   if (!progress) {
     const team = await Team.findById(teamId).select("year");
     if (!team) throw new ApiError(404, "Team not found");
@@ -29,10 +38,12 @@ export const initRound2 = asyncHandler(async (req, res) => {
     if (!questions.length)
       throw new ApiError(500, "Round 2 questions not configured");
 
+    const shuffleQuestions=shuffleArray(questions);
+
     const formatted = questions.map((q) => ({
       questionId: q.questionId, 
       questionText: q.question,
-      options: q.options,
+      options: shuffleArray(q.options),
       tokenReward: q.tokenReward,
       solved: false,
       attempts: 0,
