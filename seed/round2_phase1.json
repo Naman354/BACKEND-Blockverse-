@@ -1,399 +1,362 @@
 [
-{
-"questionId": "R2_Q1",
-"year": 1,
-"order": 1,
-"question": "What does AI stand for?",
-"options": ["Artificial Intelligence", "Automated Intelligence", "Augmented Intelligence", "Analytical Intelligence"],
-"correctAnswer": "Artificial Intelligence",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q2",
-"year": 1,
-"order": 2,
-"question": "Which company developed ChatGPT?",
-"options": ["OpenAI", "DeepMind", "Anthropic", "Microsoft Research"],
-"correctAnswer": "OpenAI",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q3",
-"year": 1,
-"order": 3,
-"question": "Which programming language is most commonly used for AI model development?",
-"options": ["Python", "R", "Julia", "MATLAB"],
-"correctAnswer": "Python",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q4",
-"year": 1,
-"order": 4,
-"question": "Which technology is used in smartphone face unlock?",
-"options": ["Computer Vision", "Pattern Recognition", "Image Processing", "Object Detection"],
-"correctAnswer": "Computer Vision",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q5",
-"year": 1,
-"order": 5,
-"question": "Which device connects a computer to the internet?",
-"options": ["Router", "Switch", "Modem", "Gateway"],
-"correctAnswer": "Router",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q6",
-"year": 1,
-"order": 6,
-"question": "Which company developed Android OS?",
-"options": ["Google", "Samsung", "Meta", "Intel"],
-"correctAnswer": "Google",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q7",
-"year": 1,
-"order": 7,
-"question": "What is Edge AI primarily focused on?",
-"options": ["Local data processing", "Distributed cloud computing", "Remote model training", "Centralized inference"],
-"correctAnswer": "Local data processing",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q8",
-"year": 1,
-"order": 8,
-"question": "Natural Language Processing mainly deals with:",
-"options": ["Human language data", "Speech signals", "Numerical datasets", "Graphical patterns"],
-"correctAnswer": "Human language data",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q9",
-"year": 1,
-"order": 9,
-"question": "Quantum computing fundamentally relies on:",
-"options": ["Qubits", "Binary Registers", "Logical Bits", "Processing Nodes"],
-"correctAnswer": "Qubits",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q10",
-"year": 1,
-"order": 10,
-"question": "Cloud AI typically performs computation on:",
-"options": ["Remote servers", "Local processors", "Edge devices", "Embedded systems"],
-"correctAnswer": "Remote servers",
-"tokenReward": 1
-},
-{
-"questionId": "R2_Q11",
-"year": 1,
-"order": 11,
-"question": "Multimodal AI refers to models capable of processing:",
-"options": ["Multiple data types", "Large datasets", "High resolution images", "Real-time signals"],
-"correctAnswer": "Multiple data types",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q12",
-"year": 1,
-"order": 12,
-"question": "Which cybersecurity threat can be created using AI?",
-"options": ["Phishing automation", "Data redundancy", "Storage overflow", "Network delay"],
-"correctAnswer": "Phishing automation",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q13",
-"year": 1,
-"order": 13,
-"question": "Which technology creates virtual replicas of real-world systems?",
-"options": ["Digital Twin", "Virtual Machine", "Cloud Instance", "Simulation Engine"],
-"correctAnswer": "Digital Twin",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q14",
-"year": 1,
-"order": 14,
-"question": "Which field is growing due to AI prompt usage?",
-"options": ["Prompt Engineering", "Manual Coding", "File Processing", "Memory Allocation"],
-"correctAnswer": "Prompt Engineering",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q15",
-"year": 1,
-"order": 15,
-"question": "Which industry is being impacted by AI automation?",
-"options": ["White collar jobs", "Manual labor", "Sports", "Agriculture"],
-"correctAnswer": "White collar jobs",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q16",
-"year": 1,
-"order": 16,
-"question": "What is the primary advantage of Edge AI?",
-"options": ["Lower latency", "Higher bandwidth", "More storage", "Better UI"],
-"correctAnswer": "Lower latency",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q17",
-"year": 1,
-"order": 17,
-"question": "Explainable AI (XAI) primarily aims to:",
-"options": ["Improve interpretability of models", "Increase training speed", "Reduce memory usage", "Enhance graphics rendering"],
-"correctAnswer": "Improve interpretability of models",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q18",
-"year": 1,
-"order": 18,
-"question": "Which cloud model provides virtual infrastructure?",
-"options": ["IaaS", "SaaS", "PaaS", "DaaS"],
-"correctAnswer": "IaaS",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q19",
-"year": 1,
-"order": 19,
-"question": "Which database is commonly used in scalable apps?",
-"options": ["NoSQL", "SQL", "CSV", "XML"],
-"correctAnswer": "NoSQL",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q20",
-"year": 1,
-"order": 20,
-"question": "Which metric evaluates classification models?",
-"options": ["Accuracy", "Bandwidth", "Latency", "Throughput"],
-"correctAnswer": "Accuracy",
-"tokenReward": 1
-},
-{
-"questionId": "R2_Q1",
-"year": 2,
-"order": 1,
-"question": "What does AI stand for?",
-"options": ["Artificial Intelligence", "Automated Intelligence", "Augmented Intelligence", "Analytical Intelligence"],
-"correctAnswer": "Artificial Intelligence",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q2",
-"year": 2,
-"order": 2,
-"question": "Which company developed ChatGPT?",
-"options": ["OpenAI", "DeepMind", "Anthropic", "Microsoft Research"],
-"correctAnswer": "OpenAI",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q3",
-"year": 2,
-"order": 3,
-"question": "Which programming language is most commonly used for AI model development?",
-"options": ["Python", "R", "Julia", "MATLAB"],
-"correctAnswer": "Python",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q4",
-"year": 2,
-"order": 4,
-"question": "Which technology is used in smartphone face unlock?",
-"options": ["Computer Vision", "Pattern Recognition", "Image Processing", "Object Detection"],
-"correctAnswer": "Computer Vision",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q5",
-"year": 2,
-"order": 5,
-"question": "Which device connects a computer to the internet?",
-"options": ["Router", "Switch", "Modem", "Gateway"],
-"correctAnswer": "Router",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q6",
-"year": 2,
-"order": 6,
-"question": "Which company developed Android OS?",
-"options": ["Google", "Samsung", "Meta", "Intel"],
-"correctAnswer": "Google",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q7",
-"year": 2,
-"order": 7,
-"question": "What is Edge AI primarily focused on?",
-"options": ["Local data processing", "Distributed cloud computing", "Remote model training", "Centralized inference"],
-"correctAnswer": "Local data processing",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q8",
-"year": 2,
-"order": 8,
-"question": "Natural Language Processing mainly deals with:",
-"options": ["Human language data", "Speech signals", "Numerical datasets", "Graphical patterns"],
-"correctAnswer": "Human language data",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q9",
-"year": 2,
-"order": 9,
-"question": "Quantum computing fundamentally relies on:",
-"options": ["Qubits", "Binary Registers", "Logical Bits", "Processing Nodes"],
-"correctAnswer": "Qubits",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q10",
-"year": 2,
-"order": 10,
-"question": "Cloud AI typically performs computation on:",
-"options": ["Remote servers", "Local processors", "Edge devices", "Embedded systems"],
-"correctAnswer": "Remote servers",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q11",
-"year": 2,
-"order": 11,
-"question": "Multimodal AI refers to models capable of processing:",
-"options": ["Multiple data types", "Large datasets", "High resolution images", "Real-time signals"],
-"correctAnswer": "Multiple data types",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q12",
-"year": 2,
-"order": 12,
-"question": "Which cybersecurity threat can be created using AI?",
-"options": ["Phishing automation", "Data redundancy", "Storage overflow", "Network delay"],
-"correctAnswer": "Phishing automation",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q13",
-"year": 2,
-"order": 13,
-"question": "Which technology creates virtual replicas of real-world systems?",
-"options": ["Digital Twin", "Virtual Machine", "Cloud Instance", "Simulation Engine"],
-"correctAnswer": "Digital Twin",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q14",
-"year": 2,
-"order": 14,
-"question": "Which field is growing due to AI prompt usage?",
-"options": ["Prompt Engineering", "Manual Coding", "File Processing", "Memory Allocation"],
-"correctAnswer": "Prompt Engineering",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q15",
-"year": 2,
-"order": 15,
-"question": "Which industry is being impacted by AI automation?",
-"options": ["White collar jobs", "Manual labor", "Sports", "Agriculture"],
-"correctAnswer": "White collar jobs",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q16",
-"year": 2,
-"order": 16,
-"question": "What is the primary advantage of Edge AI?",
-"options": ["Lower latency", "Higher bandwidth", "More storage", "Better UI"],
-"correctAnswer": "Lower latency",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q17",
-"year": 2,
-"order": 17,
-"question": "Explainable AI (XAI) primarily aims to:",
-"options": ["Improve interpretability of models", "Increase training speed", "Reduce memory usage", "Enhance graphics rendering"],
-"correctAnswer": "Improve interpretability of models",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q18",
-"year": 2,
-"order": 18,
-"question": "Which cloud model provides virtual infrastructure?",
-"options": ["IaaS", "SaaS", "PaaS", "DaaS"],
-"correctAnswer": "IaaS",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q19",
-"year": 2,
-"order": 19,
-"question": "Which database is commonly used in scalable apps?",
-"options": ["NoSQL", "SQL", "CSV", "XML"],
-"correctAnswer": "NoSQL",
-"tokenReward": 1
-},
-
-{
-"questionId": "R2_Q20",
-"year": 2,
-"order": 20,
-"question": "Which metric evaluates classification models?",
-"options": ["Accuracy", "Bandwidth", "Latency", "Throughput"],
-"correctAnswer": "Accuracy",
-"tokenReward": 1
-}
+  {
+    "questionId": "R2_Q1_Y1",
+    "year": 1,
+    "order": 1,
+    "question": "What does AI stand for?",
+    "options": ["Artificial Intelligence", "Automated Intelligence", "Augmented Intelligence", "Analytical Intelligence"],
+    "correctAnswer": "Artificial Intelligence",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q2_Y1",
+    "year": 1,
+    "order": 2,
+    "question": "Which company developed ChatGPT?",
+    "options": ["OpenAI", "DeepMind", "Anthropic", "Microsoft Research"],
+    "correctAnswer": "OpenAI",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q3_Y1",
+    "year": 1,
+    "order": 3,
+    "question": "Which programming language is most commonly used for AI model development?",
+    "options": ["Python", "R", "Julia", "MATLAB"],
+    "correctAnswer": "Python",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q4_Y1",
+    "year": 1,
+    "order": 4,
+    "question": "Which technology is used in smartphone face unlock?",
+    "options": ["Computer Vision", "Pattern Recognition", "Image Processing", "Object Detection"],
+    "correctAnswer": "Computer Vision",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q5_Y1",
+    "year": 1,
+    "order": 5,
+    "question": "Which device connects a computer to the internet?",
+    "options": ["Router", "Switch", "Modem", "Gateway"],
+    "correctAnswer": "Router",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q6_Y1",
+    "year": 1,
+    "order": 6,
+    "question": "Which company developed Android OS?",
+    "options": ["Google", "Samsung", "Meta", "Intel"],
+    "correctAnswer": "Google",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q7_Y1",
+    "year": 1,
+    "order": 7,
+    "question": "What is Edge AI primarily focused on?",
+    "options": ["Local data processing", "Distributed cloud computing", "Remote model training", "Centralized inference"],
+    "correctAnswer": "Local data processing",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q8_Y1",
+    "year": 1,
+    "order": 8,
+    "question": "Natural Language Processing mainly deals with:",
+    "options": ["Human language data", "Speech signals", "Numerical datasets", "Graphical patterns"],
+    "correctAnswer": "Human language data",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q9_Y1",
+    "year": 1,
+    "order": 9,
+    "question": "Quantum computing fundamentally relies on:",
+    "options": ["Qubits", "Binary Registers", "Logical Bits", "Processing Nodes"],
+    "correctAnswer": "Qubits",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q10_Y1",
+    "year": 1,
+    "order": 10,
+    "question": "Cloud AI typically performs computation on:",
+    "options": ["Remote servers", "Local processors", "Edge devices", "Embedded systems"],
+    "correctAnswer": "Remote servers",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q11_Y1",
+    "year": 1,
+    "order": 11,
+    "question": "Multimodal AI refers to models capable of processing:",
+    "options": ["Multiple data types", "Large datasets", "High resolution images", "Real-time signals"],
+    "correctAnswer": "Multiple data types",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q12_Y1",
+    "year": 1,
+    "order": 12,
+    "question": "Which cybersecurity threat can be created using AI?",
+    "options": ["Phishing automation", "Data redundancy", "Storage overflow", "Network delay"],
+    "correctAnswer": "Phishing automation",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q13_Y1",
+    "year": 1,
+    "order": 13,
+    "question": "Which technology creates virtual replicas of real-world systems?",
+    "options": ["Digital Twin", "Virtual Machine", "Cloud Instance", "Simulation Engine"],
+    "correctAnswer": "Digital Twin",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q14_Y1",
+    "year": 1,
+    "order": 14,
+    "question": "Which field is growing due to AI prompt usage?",
+    "options": ["Prompt Engineering", "Manual Coding", "File Processing", "Memory Allocation"],
+    "correctAnswer": "Prompt Engineering",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q15_Y1",
+    "year": 1,
+    "order": 15,
+    "question": "Which industry is being impacted by AI automation?",
+    "options": ["White collar jobs", "Manual labor", "Sports", "Agriculture"],
+    "correctAnswer": "White collar jobs",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q16_Y1",
+    "year": 1,
+    "order": 16,
+    "question": "What is the primary advantage of Edge AI?",
+    "options": ["Lower latency", "Higher bandwidth", "More storage", "Better UI"],
+    "correctAnswer": "Lower latency",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q17_Y1",
+    "year": 1,
+    "order": 17,
+    "question": "Explainable AI (XAI) primarily aims to:",
+    "options": ["Improve interpretability of models", "Increase training speed", "Reduce memory usage", "Enhance graphics rendering"],
+    "correctAnswer": "Improve interpretability of models",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q18_Y1",
+    "year": 1,
+    "order": 18,
+    "question": "Which cloud model provides virtual infrastructure?",
+    "options": ["IaaS", "SaaS", "PaaS", "DaaS"],
+    "correctAnswer": "IaaS",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q19_Y1",
+    "year": 1,
+    "order": 19,
+    "question": "Which database is commonly used in scalable apps?",
+    "options": ["NoSQL", "SQL", "CSV", "XML"],
+    "correctAnswer": "NoSQL",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q20_Y1",
+    "year": 1,
+    "order": 20,
+    "question": "Which metric evaluates classification models?",
+    "options": ["Accuracy", "Bandwidth", "Latency", "Throughput"],
+    "correctAnswer": "Accuracy",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q1_Y2",
+    "year": 2,
+    "order": 1,
+    "question": "What does AI stand for?",
+    "options": ["Artificial Intelligence", "Automated Intelligence", "Augmented Intelligence", "Analytical Intelligence"],
+    "correctAnswer": "Artificial Intelligence",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q2_Y2",
+    "year": 2,
+    "order": 2,
+    "question": "Which company developed ChatGPT?",
+    "options": ["OpenAI", "DeepMind", "Anthropic", "Microsoft Research"],
+    "correctAnswer": "OpenAI",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q3_Y2",
+    "year": 2,
+    "order": 3,
+    "question": "Which programming language is most commonly used for AI model development?",
+    "options": ["Python", "R", "Julia", "MATLAB"],
+    "correctAnswer": "Python",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q4_Y2",
+    "year": 2,
+    "order": 4,
+    "question": "Which technology is used in smartphone face unlock?",
+    "options": ["Computer Vision", "Pattern Recognition", "Image Processing", "Object Detection"],
+    "correctAnswer": "Computer Vision",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q5_Y2",
+    "year": 2,
+    "order": 5,
+    "question": "Which device connects a computer to the internet?",
+    "options": ["Router", "Switch", "Modem", "Gateway"],
+    "correctAnswer": "Router",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q6_Y2",
+    "year": 2,
+    "order": 6,
+    "question": "Which company developed Android OS?",
+    "options": ["Google", "Samsung", "Meta", "Intel"],
+    "correctAnswer": "Google",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q7_Y2",
+    "year": 2,
+    "order": 7,
+    "question": "What is Edge AI primarily focused on?",
+    "options": ["Local data processing", "Distributed cloud computing", "Remote model training", "Centralized inference"],
+    "correctAnswer": "Local data processing",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q8_Y2",
+    "year": 2,
+    "order": 8,
+    "question": "Natural Language Processing mainly deals with:",
+    "options": ["Human language data", "Speech signals", "Numerical datasets", "Graphical patterns"],
+    "correctAnswer": "Human language data",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q9_Y2",
+    "year": 2,
+    "order": 9,
+    "question": "Quantum computing fundamentally relies on:",
+    "options": ["Qubits", "Binary Registers", "Logical Bits", "Processing Nodes"],
+    "correctAnswer": "Qubits",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q10_Y2",
+    "year": 2,
+    "order": 10,
+    "question": "Cloud AI typically performs computation on:",
+    "options": ["Remote servers", "Local processors", "Edge devices", "Embedded systems"],
+    "correctAnswer": "Remote servers",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q11_Y2",
+    "year": 2,
+    "order": 11,
+    "question": "Multimodal AI refers to models capable of processing:",
+    "options": ["Multiple data types", "Large datasets", "High resolution images", "Real-time signals"],
+    "correctAnswer": "Multiple data types",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q12_Y2",
+    "year": 2,
+    "order": 12,
+    "question": "Which cybersecurity threat can be created using AI?",
+    "options": ["Phishing automation", "Data redundancy", "Storage overflow", "Network delay"],
+    "correctAnswer": "Phishing automation",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q13_Y2",
+    "year": 2,
+    "order": 13,
+    "question": "Which technology creates virtual replicas of real-world systems?",
+    "options": ["Digital Twin", "Virtual Machine", "Cloud Instance", "Simulation Engine"],
+    "correctAnswer": "Digital Twin",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q14_Y2",
+    "year": 2,
+    "order": 14,
+    "question": "Which field is growing due to AI prompt usage?",
+    "options": ["Prompt Engineering", "Manual Coding", "File Processing", "Memory Allocation"],
+    "correctAnswer": "Prompt Engineering",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q15_Y2",
+    "year": 2,
+    "order": 15,
+    "question": "Which industry is being impacted by AI automation?",
+    "options": ["White collar jobs", "Manual labor", "Sports", "Agriculture"],
+    "correctAnswer": "White collar jobs",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q16_Y2",
+    "year": 2,
+    "order": 16,
+    "question": "What is the primary advantage of Edge AI?",
+    "options": ["Lower latency", "Higher bandwidth", "More storage", "Better UI"],
+    "correctAnswer": "Lower latency",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q17_Y2",
+    "year": 2,
+    "order": 17,
+    "question": "Explainable AI (XAI) primarily aims to:",
+    "options": ["Improve interpretability of models", "Increase training speed", "Reduce memory usage", "Enhance graphics rendering"],
+    "correctAnswer": "Improve interpretability of models",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q18_Y2",
+    "year": 2,
+    "order": 18,
+    "question": "Which cloud model provides virtual infrastructure?",
+    "options": ["IaaS", "SaaS", "PaaS", "DaaS"],
+    "correctAnswer": "IaaS",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q19_Y2",
+    "year": 2,
+    "order": 19,
+    "question": "Which database is commonly used in scalable apps?",
+    "options": ["NoSQL", "SQL", "CSV", "XML"],
+    "correctAnswer": "NoSQL",
+    "tokenReward": 1
+  },
+  {
+    "questionId": "R2_Q20_Y2",
+    "year": 2,
+    "order": 20,
+    "question": "Which metric evaluates classification models?",
+    "options": ["Accuracy", "Bandwidth", "Latency", "Throughput"],
+    "correctAnswer": "Accuracy",
+    "tokenReward": 1
+  }
 ]

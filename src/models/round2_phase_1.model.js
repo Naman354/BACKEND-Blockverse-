@@ -2,6 +2,12 @@ import mongoose from "mongoose";
 
 const round2QuestionSchema = new mongoose.Schema(
   {
+    questionId: {
+      type: String,
+      required: true,
+      unique: true,
+    },  
+    
     year: {
       type: Number,
       required: true

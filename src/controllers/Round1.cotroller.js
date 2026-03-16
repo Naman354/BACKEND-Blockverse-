@@ -120,7 +120,7 @@ export const submitRound1Answer = asyncHandler(async (req, res) => {
     (q) => q.questionId.toString() === questionId,
   );
 
-  console.log("Questions...", question);
+  // console.log("Questions...", question);
 
   if (!question) throw new ApiError(404, "Question not found");
 
@@ -130,6 +130,7 @@ export const submitRound1Answer = asyncHandler(async (req, res) => {
   const dbQuestion = await Round1Question.findById(question.questionId).select(
     "correctAnswer pointReward",
   );
+  if (!dbQuestion) throw new ApiError(404, "Question not found in DB");
 
   const normalizedAnswer = String(answer).trim().toLowerCase();
   const correctAnswer = String(dbQuestion.correctAnswer).trim().toLowerCase();
