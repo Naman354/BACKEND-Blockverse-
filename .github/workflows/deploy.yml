@@ -17,14 +17,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20.13.1"
-          cache: "npm"
+          # cache: "npm"
 
-      # ✅ install deps from Backend folder
       - name: Install dependencies
         run: npm ci
         working-directory: Backend
 
-      # ✅ create deployment package
       - name: Create deployment package
         working-directory: Backend
         run: |
