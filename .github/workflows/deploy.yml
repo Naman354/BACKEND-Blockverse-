@@ -29,7 +29,7 @@ jobs:
           mkdir -p deploy
           cp -r src deploy/
           cp package*.json deploy/
-          cp ecosystem.config.js deploy/
+          cp ecosystem.config.cjs deploy/
           [ -f .env.example ] && cp .env.example deploy/ || echo "No .env.example found"
           tar -czf deploy.tar.gz -C deploy .
 
@@ -75,7 +75,7 @@ jobs:
             if [ -d "src" ]; then
               timestamp=$(date +%Y%m%d_%H%M%S)
               mkdir -p backups
-              tar -czf backups/backup_${timestamp}.tar.gz src package.json ecosystem.config.js .env 2>/dev/null || true
+              tar -czf backups/backup_${timestamp}.tar.gz src package.json ecosystem.config.cjs .env 2>/dev/null || true
               ls -t backups/backup_*.tar.gz 2>/dev/null | tail -n +6 | xargs -r rm
             fi
 
@@ -97,9 +97,9 @@ jobs:
 
             # restart app
             if pm2 describe express-app > /dev/null 2>&1; then
-              pm2 reload ecosystem.config.js --update-env
+              pm2 reload ecosystem.config.cjs --update-env
             else
-              pm2 start ecosystem.config.js
+              pm2 start ecosystem.config.cjs
             fi
 
             pm2 save
@@ -149,7 +149,7 @@ jobs:
             if [ -n "$latest_backup" ]; then
               tar -xzf "$latest_backup" -C /var/www/express-app
               npm install
-              pm2 reload ecosystem.config.js
+              pm2 reload ecosystem.config.cjs
             fi
 
           EOF
