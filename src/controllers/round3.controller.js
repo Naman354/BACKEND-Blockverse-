@@ -1,5 +1,5 @@
 const ROUND3_DURATION_MS = 30 * 60 * 1000; // 30 minutes
-const MAX_MISTAKES_PER_BOMB = 2; // reserved for submit logic
+const MAX_MISTAKES_PER_BOMB = 1000; // reserved for submit logic
 
 // simple check for deploy
 
@@ -86,13 +86,19 @@ export const initRound3 = asyncHandler(async (req, res) => {
 });
 export const submitRound3Answer = asyncHandler(async (req, res) => {
   const teamId = req.teamId;
+  const team = await Team.findById(teamId).select("year");
+
+if (!team) {
+  throw new ApiError(404, "Team not found");
+}
+  
   const { bombNumber, questionNumber, answer } = req.body;
 
   if (!teamId) {
     throw new ApiError(401, "Unauthorized");
   }
 
-  if (bombNumber === undefined || questionNumber === undefined || !answer) {
+  if (bombNumber === undefined || questionNumber === undefined || answer === undefined) {
     throw new ApiError(
       400,
       "bombNumber, questionNumber and answer are required",
@@ -136,20 +142,32 @@ export const submitRound3Answer = asyncHandler(async (req, res) => {
       new ApiResponse(200, { status: "ALREADY_SOLVED" }, "Already solved"),
     );
   }
-
-  const dbQuestion = await Round3Question.findById(question.questionId).select(
+  const dbQuestion = await Round3Question.findOne({
+  year: team.year,
+  bombNumber: bomb.bombNumber,
+  questionNumber: question.questionNumber,
+}).select(
     "correctAnswer points",
   );
-
+  
   if (!dbQuestion) {
     throw new ApiError(500, "Question data missing");
   }
 
   const normalizedAnswer = String(answer).trim().toUpperCase();
 
-  if (
-    normalizedAnswer === String(dbQuestion.correctAnswer).trim().toUpperCase()
-  ) {
+  const optionIndex = ["A", "B", "C", "D"].indexOf(normalizedAnswer);
+
+let finalAnswer = normalizedAnswer;
+
+if (optionIndex !== -1) {
+  finalAnswer = question.options[optionIndex];
+}
+
+if (
+  String(finalAnswer).trim().toUpperCase() ===
+  String(dbQuestion.correctAnswer).trim().toUpperCase()
+) {
     question.solved = true;
 
     progress.scoreAdded += dbQuestion.points;
