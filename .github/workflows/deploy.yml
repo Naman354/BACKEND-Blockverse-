@@ -22,8 +22,7 @@ jobs:
         with:
           node-version: "20.13.1"
           cache: "npm"
-          cache-dependency-path: package-lock.json   # ✅ FIXED
-
+          
       - name: Install dependencies
         run: npm ci
 
