@@ -1,0 +1,37 @@
+[
+  {
+    "clueId": "R2_Y1_C1",
+    "year": 1,
+    "title": "Starting Point",
+    "description": "Every system begins with a single assumption. If that assumption is wrong, everything built on it can still appear stable.",
+    "tokenCost": 3
+  },
+  {
+    "clueId": "R2_Y1_C2",
+    "year": 1,
+    "title": "Connection Hint",
+    "description": "Nothing in the Realm exists alone. A correct step that ignores what comes before or after it is still an error.",
+    "tokenCost": 4
+  },
+  {
+    "clueId": "R2_Y1_C3",
+    "year": 1,
+    "title": "Security Clue",
+    "description": "In the Genova Realm, identity is noise. Validity is the only signal that determines trust.",
+    "tokenCost": 5
+  },
+  {
+    "clueId": "R2_Y1_C4",
+    "year": 1,
+    "title": "Network Insight",
+    "description": "Control is safest when it appears distributed. Failure becomes visible only when a single voice remains.",
+    "tokenCost": 3
+  },
+  {
+    "clueId": "R2_Y1_C5",
+    "year": 1,
+    "title": "Final Hint",
+    "description": "The system does not break from errors in parts. It evolves when all corrections align. Alignment is not repair.",
+    "tokenCost": 6
+  }
+]
