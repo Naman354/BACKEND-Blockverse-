@@ -1,0 +1,37 @@
+[
+  {
+    "clueId": "R2_Y2_C1",
+    "year": 2,
+    "title": "Hidden Formula",
+    "description": "The Realm does not remember size. It remembers proportion. Change the scale, and the truth remains unchanged.",
+    "tokenCost": 3
+  },
+  {
+    "clueId": "R2_Y2_C2",
+    "year": 2,
+    "title": "Pattern Finder",
+    "description": "Growth is never the first sign. Repetition is. What repeats is what the system expects.",
+    "tokenCost": 3
+  },
+  {
+    "clueId": "R2_Y2_C3",
+    "year": 2,
+    "title": "Logical Order",
+    "description": "The system does not fail when steps are incorrect. It fails when they are executed out of order.",
+    "tokenCost": 4
+  },
+  {
+    "clueId": "R2_Y2_C4",
+    "year": 2,
+    "title": "Binary Insight",
+    "description": "The Genesis Block does not grow forward. It multiplies. Each step doubles the state that came before.",
+    "tokenCost": 5
+  },
+  {
+    "clueId": "R2_Y2_C5",
+    "year": 2,
+    "title": "Final Connection",
+    "description": "When ratios, patterns, sequences, and powers converge, the system does not resolve. It finalizes.",
+    "tokenCost": 6
+  }
+]
