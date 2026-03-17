@@ -1,0 +1,155 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Backend
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.13.1"
+          cache: "npm"
+          cache-dependency-path: Backend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create deployment package (without node_modules)
+        run: |
+          mkdir -p deploy
+          cp -r src deploy/
+          cp package*.json deploy/
+          cp ecosystem.config.cjs deploy/
+          [ -f .env.example ] && cp .env.example deploy/ || echo "No .env.example found"
+          tar -czf deploy.tar.gz -C deploy .
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-package
+          path: Backend/deploy.tar.gz
+          retention-days: 1
+
+  deploy:
+    name: Deploy to EC2
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: deployment-package
+
+      - name: Deploy to EC2 via SSH
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          echo "$SSH_PRIVATE_KEY" > private_key.pem
+          chmod 600 private_key.pem
+
+          scp -i private_key.pem -o StrictHostKeyChecking=no \
+            deploy.tar.gz ${EC2_USERNAME}@${EC2_HOST}:/tmp/
+
+          ssh -i private_key.pem -o StrictHostKeyChecking=no \
+            ${EC2_USERNAME}@${EC2_HOST} << 'EOF'
+
+            cd /var/www/express-app
+
+            sudo chown -R $USER:$USER /var/www/express-app
+
+            if [ -d "src" ]; then
+              timestamp=$(date +%Y%m%d_%H%M%S)
+              mkdir -p backups
+              tar -czf backups/backup_${timestamp}.tar.gz src package.json ecosystem.config.cjs .env 2>/dev/null || true
+              ls -t backups/backup_*.tar.gz 2>/dev/null | tail -n +6 | xargs -r rm
+            fi
+
+            tar --overwrite -xzf /tmp/deploy.tar.gz -C /var/www/express-app
+            rm /tmp/deploy.tar.gz
+
+            sudo chown -R $USER:$USER /var/www/express-app
+
+            npm ci
+
+            if [ ! -f .env ]; then
+              echo "NODE_ENV=production" > .env
+              echo "PORT=8000" >> .env
+            fi
+
+            mkdir -p logs
+
+            if pm2 describe express-app > /dev/null 2>&1; then
+              sudo pm2 reload ecosystem.config.cjs --update-env
+            else
+              sudo pm2 start ecosystem.config.cjs
+            fi
+
+            sudo pm2 save
+
+          EOF
+
+          rm private_key.pem
+
+      - name: Verify deployment
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+        run: |
+          sleep 10
+
+          for i in {1..2}; do
+            response=$(curl -s -o /dev/null -w "%{http_code}" http://${EC2_HOST} 2>/dev/null || echo "000")
+
+            if [ "$response" = "200" ] || [ "$response" = "301" ] || [ "$response" = "302" ]; then
+              echo "Deployment successful: $response"
+              exit 0
+            fi
+
+            sleep 5
+          done
+
+          echo "Deployment verification failed"
+          exit 1
+
+      - name: Rollback on failure
+        if: failure()
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          echo "$SSH_PRIVATE_KEY" > private_key.pem
+          chmod 600 private_key.pem
+
+          ssh -i private_key.pem -o StrictHostKeyChecking=no \
+            ${EC2_USERNAME}@${EC2_HOST} << 'EOF'
+
+            cd /var/www/express-app
+            sudo chown -R $USER:$USER /var/www/express-app
+
+            latest_backup=$(ls -t backups/backup_*.tar.gz 2>/dev/null | head -1)
+
+            if [ -n "$latest_backup" ]; then
+              tar -xzf "$latest_backup" -C /var/www/express-app
+              npm ci
+              pm2 reload ecosystem.config.cjs
+            fi
+
+          EOF
+
+          rm private_key.pem  
