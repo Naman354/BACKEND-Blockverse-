@@ -57,6 +57,10 @@ app.get("/", (req, res) => {
   res.send("Blockverse Backend is running.....");
 });
 
+app.get("/api", (req, res) => {
+  res.send("API working");
+});
+
 app.use("/api", routes);
 app.use(errorHandler);
 
